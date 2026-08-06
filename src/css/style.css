@@ -1,0 +1,377 @@
+/* ===========================
+   DRIFT CURRENTS — MAIN CSS
+   Sky blue / wave cloud theme
+   =========================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --sky-light: #EBF5FB;
+  --sky-mid: #B8D9F0;
+  --navy: #0D3B5E;
+  --blue-accent: #1A6FA8;
+  --white: #FFFFFF;
+  --text-muted: #4A7FA5;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--navy);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+/* ---- NAV ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sky-mid);
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-logo span { color: var(--blue-accent); }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--blue-accent); }
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--navy);
+}
+
+/* ---- MOBILE DRAWER ---- */
+.nav-drawer {
+  position: fixed;
+  top: 0; right: -280px;
+  width: 280px; height: 100vh;
+  background: var(--white);
+  z-index: 200;
+  padding: 60px 32px 32px;
+  transition: right 0.3s ease;
+  border-left: 1px solid var(--sky-mid);
+}
+
+.nav-drawer.open { right: 0; }
+.nav-drawer ul { list-style: none; }
+.nav-drawer ul li { margin-bottom: 24px; }
+.nav-drawer ul a { color: var(--navy); text-decoration: none; font-size: 1.1rem; }
+
+.nav-drawer-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none; border: none;
+  font-size: 1.4rem; cursor: pointer;
+  color: var(--navy);
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 150;
+}
+
+.nav-overlay.open { display: block; }
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(160deg, #B8D9F0 0%, #D6ECFA 40%, #EBF5FB 70%, #F5FAFF 100%);
+  padding: 80px 24px 160px;
+  overflow: hidden;
+}
+
+.hero-content { max-width: 760px; position: relative; z-index: 2; }
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: bold;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--blue-accent);
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--navy);
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.7;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 36px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--blue-accent); }
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  z-index: 1;
+}
+
+.hero-wave svg { display: block; width: 100%; height: 120px; }
+
+/* ---- WAVE DIVIDER ---- */
+.wave-divider { line-height: 0; }
+.wave-divider svg { display: block; width: 100%; height: 80px; }
+
+/* ---- SECTION HEADINGS ---- */
+.destinations h2,
+.host-services h2,
+.essentials h2,
+.about h2,
+.connect h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- DESTINATIONS ---- */
+.destinations {
+  padding: 80px 24px;
+  text-align: center;
+  background: var(--white);
+}
+
+.destination-cards {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dest-card {
+  background: var(--white);
+  border: 1px solid var(--sky-mid);
+  border-radius: 8px;
+  width: 320px;
+  text-align: left;
+  text-decoration: none;
+  color: var(--navy);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.dest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(13,59,94,0.12);
+}
+
+.dest-card.coming-soon { opacity: 0.75; cursor: default; }
+.dest-card.coming-soon:hover { transform: none; box-shadow: none; }
+
+.dest-card-top {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dest-card-top.toccoa { background: linear-gradient(135deg, #4A90D9, #1B6CA8); }
+.dest-card-top.soflo  { background: linear-gradient(135deg, #43B89C, #1A7A60); }
+.dest-card-top.golden { background: linear-gradient(135deg, #E8A44A, #C47A15); }
+
+.dest-icon { font-size: 3rem; }
+
+.dest-card-body { padding: 20px; }
+.dest-card-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.dest-card-body p { font-size: 0.9rem; color: #4A5568; line-height: 1.5; margin-bottom: 12px; }
+
+.dest-location {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.dest-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--blue-accent);
+  font-weight: bold;
+}
+
+.dest-link.coming { color: var(--text-muted); font-weight: normal; font-style: italic; }
+
+/* ---- HOST SERVICES ---- */
+.host-services {
+  background: var(--sky-light);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.host-inner { max-width: 900px; margin: 0 auto; }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 48px 0;
+  text-align: left;
+}
+
+.service-item {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid var(--sky-mid);
+}
+
+.service-icon { font-size: 1.8rem; display: block; margin-bottom: 12px; }
+.service-item h4 { font-size: 1.05rem; margin-bottom: 8px; color: var(--navy); }
+.service-item p { font-size: 0.88rem; color: #4A5568; line-height: 1.5; }
+
+/* ---- CABIN ESSENTIALS ---- */
+.essentials {
+  padding: 80px 24px;
+  text-align: center;
+  background: var(--white);
+}
+
+/* ---- ABOUT ---- */
+.about {
+  background: var(--sky-light);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.about-inner { max-width: 740px; margin: 0 auto; }
+
+.about-inner p {
+  font-size: 1rem;
+  color: var(--navy);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ---- CONNECT ---- */
+.connect {
+  padding: 80px 24px;
+  text-align: center;
+  background: linear-gradient(160deg, #B8D9F0 0%, #EBF5FB 100%);
+}
+
+.connect p {
+  color: var(--navy);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 48px 24px 32px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.footer-logo { font-size: 1.3rem; display: block; margin-bottom: 4px; }
+.footer-tagline { font-size: 0.85rem; color: var(--sky-mid); font-style: italic; }
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--sky-mid);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--white); }
+.footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .destination-cards { flex-direction: column; align-items: center; }
+  .dest-card { width: 100%; max-width: 400px; }
+  .service-grid { grid-template-columns: 1fr; }
+  .footer-links { flex-direction: column; gap: 12px; }
+}
