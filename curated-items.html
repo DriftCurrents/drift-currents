@@ -21,6 +21,11 @@
     .product-note { font-size: 0.88rem; color: #4A5568; line-height: 1.5; flex: 1; }
     .product-link { display: inline-block; background: var(--navy); color: var(--white); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; text-align: center; transition: background 0.2s; }
     .product-link:hover { background: var(--blue-accent); }
+    .section-index { max-width: 1100px; margin: 0 auto; padding: 32px 24px 0; }
+    .section-index h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px; }
+    .index-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .index-links a { display: inline-block; background: var(--sky-light); border: 1px solid var(--sky-mid); color: var(--navy); text-decoration: none; font-size: 0.85rem; padding: 6px 14px; border-radius: 20px; transition: background 0.2s, color 0.2s; }
+    .index-links a:hover { background: var(--navy); color: var(--white); }
     @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -62,10 +67,31 @@
   </svg>
 </div>
 
+<div class="section-index">
+  <h3>Jump to a Section</h3>
+  <div class="index-links">
+    <a href="#bedding">Bedding &amp; Linens</a>
+    <a href="#bath">Bath</a>
+    <a href="#kitchen">Kitchen &amp; Dining</a>
+    <a href="#coffee">Coffee Station</a>
+    <a href="#drinkware">Drinkware</a>
+    <a href="#decor">Cabin Decor</a>
+    <a href="#outdoor">Outdoor &amp; Fire Pit</a>
+    <a href="#water-safety">Water Safety</a>
+    <a href="#fire-safety">Fire Safety</a>
+    <a href="#leak-protection">Leak Protection</a>
+    <a href="#security">Security</a>
+    <a href="#cameras">Cameras</a>
+    <a href="#wifi">WiFi</a>
+    <a href="#dog-friendly">Dog Friendly</a>
+    <a href="#smart">Smart</a>
+  </div>
+</div>
+
 <div class="curated-section">
 
   <!-- BEDDING & LINENS -->
-  <h2>Bedding &amp; Linens</h2>
+  <h2 id="bedding">Bedding &amp; Linens</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">California Design Den 100% Cotton Sateen King Bed Sheet Set &mdash; 6pc White, 400 Thread Count</div>
@@ -100,7 +126,7 @@
   </div>
 
   <!-- BATH -->
-  <h2>Bath</h2>
+  <h2 id="bath">Bath</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Gorilla Grip Bath Rug Mat &mdash; 36x24, Blue Chenille</div>
@@ -110,7 +136,7 @@
   </div>
 
   <!-- KITCHEN & DINING -->
-  <h2>Kitchen &amp; Dining</h2>
+  <h2 id="kitchen">Kitchen &amp; Dining</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Corelle Vitrelle 18-Piece Dinnerware Set &mdash; Service for 6, Winter Frost White</div>
@@ -130,7 +156,7 @@
   </div>
 
   <!-- COFFEE STATION -->
-  <h2>Coffee Station</h2>
+  <h2 id="coffee">Coffee Station</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Ninja DualBrew Pro Specialty Coffee Maker &mdash; CFP301, Black</div>
@@ -175,7 +201,7 @@
   </div>
 
   <!-- DRINKWARE -->
-  <h2>Drinkware &mdash; Tervis</h2>
+  <h2 id="drinkware">Drinkware &mdash; Tervis</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Tervis Kelly Ventura &ldquo;Currents&rdquo; Insulated Tumbler &mdash; 16oz, Set of 4</div>
@@ -210,7 +236,7 @@
   </div>
 
   <!-- CABIN DECOR -->
-  <h2>Cabin Decor</h2>
+  <h2 id="decor">Cabin Decor</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Owl Decoys for Bird Deterrent &mdash; 3-Pack, Weatherproof</div>
@@ -220,7 +246,7 @@
   </div>
 
   <!-- OUTDOOR & FIRE PIT -->
-  <h2>Outdoor &amp; Fire Pit</h2>
+  <h2 id="outdoor">Outdoor &amp; Fire Pit</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Fire Pit Ring &mdash; 45in Outer / 39in Inner, Heavy Duty 3mm Steel</div>
@@ -230,7 +256,7 @@
   </div>
 
   <!-- WATER SAFETY -->
-  <h2>Water Safety</h2>
+  <h2 id="water-safety">Water Safety</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Life Ring &mdash; 23/28in Boat Safety Throw Ring with 98.5ft Floating Rescue Rope</div>
@@ -240,7 +266,7 @@
   </div>
 
   <!-- FIRE SAFETY -->
-  <h2>Fire Safety</h2>
+  <h2 id="fire-safety">Fire Safety</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">First Alert 10-Year Battery Combination Smoke &amp; Carbon Monoxide Alarm &mdash; SMCO410</div>
@@ -250,7 +276,7 @@
   </div>
 
   <!-- LEAK PROTECTION -->
-  <h2>Leak Protection</h2>
+  <h2 id="leak-protection">Leak Protection</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Moen Flo Automatic Water Leak Detector &amp; Shutoff &mdash; 3/4in</div>
@@ -265,7 +291,7 @@
   </div>
 
   <!-- SECURITY -->
-  <h2>Security</h2>
+  <h2 id="security">Security</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Schlage Encode Smart WiFi Deadbolt &mdash; Camelot Trim, Satin Nickel</div>
@@ -295,7 +321,7 @@
   </div>
 
   <!-- CAMERAS -->
-  <h2>Cameras</h2>
+  <h2 id="cameras">Cameras</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Ring Floodlight Cam Wired Plus &mdash; White</div>
@@ -310,7 +336,7 @@
   </div>
 
   <!-- WIFI -->
-  <h2>WiFi</h2>
+  <h2 id="wifi">WiFi</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">TP-Link Deco X55 AX3000 WiFi 6 Mesh System &mdash; 3-Pack</div>
@@ -320,12 +346,12 @@
     <div class="product-card">
       <div class="product-name">Kasa Matter Smart Plug with Energy Monitoring &mdash; 4-Pack, KP125M</div>
       <div class="product-note">Use to remotely reboot your mesh router when guests have WiFi issues. Works with Apple Home, Alexa, and Google. 15A/1800W max. 2.4G WiFi only.</div>
-      <a href="https://amzn.to/PLACEHOLDER" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
+      <a href="https://amzn.to/4bzlKgQ" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
     </div>
   </div>
 
   <!-- DOG FRIENDLY -->
-  <h2>Dog Friendly</h2>
+  <h2 id="dog-friendly">Dog Friendly</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">Gorilla Grip Dog Bowl Set with Silicone Mat &mdash; 4 Cup, Turquoise</div>
@@ -335,7 +361,7 @@
   </div>
 
   <!-- SMART -->
-  <h2>Smart</h2>
+  <h2 id="smart">Smart</h2>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-name">First Alert 10-Year Battery Combination Smoke &amp; Carbon Monoxide Alarm &mdash; SMCO410</div>
@@ -370,7 +396,7 @@
     <div class="product-card">
       <div class="product-name">Kasa Matter Smart Plug with Energy Monitoring &mdash; 4-Pack, KP125M</div>
       <div class="product-note">Use to remotely reboot your mesh router when guests have WiFi issues. Works with Apple Home, Alexa, and Google. 15A/1800W max. 2.4G WiFi only.</div>
-      <a href="https://amzn.to/PLACEHOLDER" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
+      <a href="https://amzn.to/4bzlKgQ" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
     </div>
   </div>
 
