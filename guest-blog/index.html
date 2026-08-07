@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Drift Currents Guest Blog — cabin life, product picks, and behind-the-scenes from our properties across the Southeast." />
+  <title>Guest Blog | Drift Currents</title>
+  <link rel="canonical" href="https://driftcurrents.com/guest-blog/" />
+  <link rel="stylesheet" href="../src/css/style.css" />
+  <style>
+    .blog-hero { background: linear-gradient(160deg, #B8D9F0 0%, #EBF5FB 100%); padding: 60px 24px 40px; text-align: center; }
+    .blog-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 12px; }
+    .blog-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .blog-grid-section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+    .blog-card { background: var(--white); border: 1px solid var(--sky-mid); border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--navy); display: block; transition: transform 0.2s, box-shadow 0.2s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,59,94,0.12); }
+    .blog-card-top { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .blog-card-top.guest { background: linear-gradient(135deg, #4A90D9, #1B6CA8); }
+    .blog-card-body { padding: 24px; }
+    .blog-card-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-accent); margin-bottom: 8px; display: block; }
+    .blog-card-title { font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; line-height: 1.3; color: var(--navy); }
+    .blog-card-excerpt { font-size: 0.88rem; color: #4A5568; line-height: 1.5; margin-bottom: 16px; }
+    .blog-card-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px; }
+    .blog-card-link { font-size: 0.85rem; color: var(--blue-accent); font-weight: bold; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Drift <span>Currents</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html#destinations">Our Destinations</a></li>
+    <li><a href="../index.html#host-services">Host Services</a></li>
+    <li><a href="../host-blog/">Host Blog</a></li>
+    <li><a href="../guest-blog/">Guest Blog</a></li>
+    <li><a href="../curated-items.html">Curated Items</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#connect">Connect</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
+  <ul>
+    <li><a href="../index.html#destinations">Our Destinations</a></li>
+    <li><a href="../index.html#host-services">Host Services</a></li>
+    <li><a href="../host-blog/">Host Blog</a></li>
+    <li><a href="../guest-blog/">Guest Blog</a></li>
+    <li><a href="../curated-items.html">Curated Items</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#connect">Connect</a></li>
+  </ul>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="blog-hero">
+  <h1>Guest Blog</h1>
+  <p>Cabin life, product picks, and behind-the-scenes from our properties &mdash; for the guests who always ask.</p>
+</div>
+
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C180,50 360,0 540,25 C720,50 900,5 1080,30 C1260,55 1350,15 1440,25 L1440,60 L0,60 Z" fill="#EBF5FB"/>
+  </svg>
+</div>
+
+<div class="blog-grid-section">
+  <div class="blog-grid">
+
+    <a href="what-shampoo-do-you-use.html" class="blog-card">
+      <div class="blog-card-top guest">&#x1F6BF;</div>
+      <div class="blog-card-body">
+        <span class="blog-card-category">Cabin Life</span>
+        <div class="blog-card-title">The Shampoo &amp; Conditioner Guests Always Ask About</div>
+        <div class="blog-card-excerpt">We get this question all the time. Here&rsquo;s what&rsquo;s in the shower at Toccoa Currents &mdash; and exactly where to get it for home.</div>
+        <div class="blog-card-meta">August 2026 &middot; 3 min read</div>
+        <div class="blog-card-link">Read More &rarr;</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Drift <strong>Currents</strong></span>
+      <span class="footer-tagline">Curated Short-Term Rentals</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://toccoacurrents.com">Toccoa Currents</a>
+      <a href="../curated-items.html">Curated Items</a>
+      <a href="../index.html#host-services">Host Services</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Drift Currents &middot; All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.querySelector('.nav-drawer-close');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+  hamburger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+</script>
+
+</body>
+</html>
