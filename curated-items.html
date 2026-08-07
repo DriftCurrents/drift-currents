@@ -28,6 +28,10 @@
     .index-links { display: flex; flex-wrap: wrap; gap: 10px; }
     .index-links a { display: inline-block; background: var(--sky-light); border: 1px solid var(--sky-mid); color: var(--navy); text-decoration: none; font-size: 0.85rem; padding: 6px 14px; border-radius: 20px; transition: background 0.2s, color 0.2s; }
     .index-links a:hover { background: var(--navy); color: var(--white); }
+    .search-bar { max-width: 1100px; margin: 0 auto; padding: 32px 24px 0; }
+    .search-bar input { width: 100%; padding: 12px 18px; font-size: 1rem; border: 1px solid var(--sky-mid); border-radius: 4px; color: var(--navy); background: var(--white); outline: none; font-family: inherit; }
+    .search-bar input:focus { border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(26,111,168,0.12); }
+    .no-results { text-align: center; padding: 60px 24px; color: var(--text-muted); font-size: 1rem; display: none; }
     @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -69,7 +73,12 @@
   </svg>
 </div>
 
-<div class="section-index">
+<div class="search-bar">
+  <input type="search" id="productSearch" placeholder="Search products&hellip;" aria-label="Search products" />
+</div>
+<div class="no-results" id="noResults">No products found. Try a different search term.</div>
+
+<div class="section-index" id="sectionIndex">
   <h3>Jump to a Section</h3>
   <div class="index-links">
     <a href="#bedding">Bedding &amp; Linens</a>
@@ -975,6 +984,49 @@
   closeBtn.addEventListener('click', closeDrawer);
   overlay.addEventListener('click', closeDrawer);
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  const searchInput = document.getElementById('productSearch');
+  const noResults = document.getElementById('noResults');
+  const sectionIndex = document.getElementById('sectionIndex');
+
+  searchInput.addEventListener('input', function () {
+    const term = this.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('.product-card');
+    const sections = document.querySelectorAll('.curated-section h2');
+    let totalVisible = 0;
+
+    if (!term) {
+      cards.forEach(c => c.style.display = '');
+      sections.forEach(h => {
+        h.style.display = '';
+        h.nextElementSibling.style.display = '';
+      });
+      noResults.style.display = 'none';
+      sectionIndex.style.display = '';
+      return;
+    }
+
+    sectionIndex.style.display = 'none';
+
+    sections.forEach(h2 => {
+      const grid = h2.nextElementSibling;
+      const gridCards = grid.querySelectorAll('.product-card');
+      let sectionVisible = 0;
+
+      gridCards.forEach(card => {
+        const name = card.querySelector('.product-name')?.textContent.toLowerCase() || '';
+        const note = card.querySelector('.product-note')?.textContent.toLowerCase() || '';
+        const match = name.includes(term) || note.includes(term);
+        card.style.display = match ? '' : 'none';
+        if (match) { sectionVisible++; totalVisible++; }
+      });
+
+      h2.style.display = sectionVisible ? '' : 'none';
+      grid.style.display = sectionVisible ? '' : 'none';
+    });
+
+    noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+  });
 </script>
 
 </body>
