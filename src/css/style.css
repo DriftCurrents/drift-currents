@@ -243,6 +243,8 @@ nav {
 .dest-card-top.golden { background: linear-gradient(135deg, #D4BC94, #B09060); }
 
 .dest-icon { font-size: 2rem; letter-spacing: 0.1em; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif; }
+.toccoa-five-t { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 14px; padding: 0 16px; }
+.toccoa-five-t span { color: #fff; font-size: 0.72rem; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif; white-space: nowrap; letter-spacing: 0.03em; }
 
 .dest-card-body { padding: 20px; }
 .dest-card-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
