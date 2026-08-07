@@ -238,8 +238,8 @@ nav {
   justify-content: center;
 }
 
-.dest-card-top.toccoa { background: linear-gradient(135deg, #4A90D9, #1B6CA8); }
-.dest-card-top.soflo  { background: linear-gradient(135deg, #43B89C, #1A7A60); }
+.dest-card-top.toccoa { background: linear-gradient(135deg, #388E3C, #1B5E20); }
+.dest-card-top.soflo  { background: linear-gradient(135deg, #1E88E5, #0D47A1); }
 .dest-card-top.golden { background: linear-gradient(135deg, #D4BC94, #B09060); }
 
 .dest-icon { font-size: 3rem; }
