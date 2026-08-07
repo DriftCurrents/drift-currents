@@ -242,7 +242,7 @@ nav {
 .dest-card-top.soflo  { background: linear-gradient(135deg, #1E88E5, #0D47A1); }
 .dest-card-top.golden { background: linear-gradient(135deg, #D4BC94, #B09060); }
 
-.dest-icon { font-size: 3rem; }
+.dest-icon { font-size: 2rem; letter-spacing: 0.1em; }
 
 .dest-card-body { padding: 20px; }
 .dest-card-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
