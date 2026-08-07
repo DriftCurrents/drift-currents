@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curated Items — products we stock our Drift Currents cabins with, recommended for guests and fellow STR hosts." />
+  <title>Curated Items | Drift Currents</title>
+  <link rel="canonical" href="https://driftcurrents.com/curated-items.html" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <style>
+    .curated-hero {
+      background: linear-gradient(160deg, #B8D9F0 0%, #EBF5FB 100%);
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+
+    .curated-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .curated-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 12px;
+      line-height: 1.6;
+    }
+
+    .affiliate-disclosure {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .curated-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .curated-section h2 {
+      font-size: 1.6rem;
+      color: var(--navy);
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--sky-mid);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .product-card {
+      border: 1px solid var(--sky-mid);
+      border-radius: 8px;
+      padding: 24px;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(13,59,94,0.1);
+    }
+
+    .product-name {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .product-note {
+      font-size: 0.88rem;
+      color: #4A5568;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .product-link {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .product-link:hover {
+      background: var(--blue-accent);
+    }
+
+    @media (max-width: 768px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Drift <span>Currents</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li><a href="index.html#host-services">Host Services</a></li>
+    <li><a href="curated-items.html">Curated Items</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#connect">Connect</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
+  <ul>
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li><a href="index.html#host-services">Host Services</a></li>
+    <li><a href="curated-items.html">Curated Items</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#connect">Connect</a></li>
+  </ul>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- HERO -->
+<div class="curated-hero">
+  <h1>Curated Items</h1>
+  <p>Everything we stock our cabins with &mdash; tried, tested, and guest-approved. Shop our picks and support Drift Currents at no extra cost to you.</p>
+  <p class="affiliate-disclosure">As an Amazon Associate, Drift Currents earns from qualifying purchases.</p>
+</div>
+
+<!-- WAVE -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C180,50 360,0 540,25 C720,50 900,5 1080,30 C1260,55 1350,15 1440,25 L1440,60 L0,60 Z" fill="#EBF5FB"/>
+  </svg>
+</div>
+
+<!-- PRODUCTS -->
+<div class="curated-section">
+
+  <h2>Bedding &amp; Linens</h2>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-name">California Design Den 100% Cotton Sateen King Bed Sheet Set &mdash; 6pc White, 400 Thread Count</div>
+      <div class="product-note">Good Housekeeping Seal of approval. 16&rdquo; deep pocket fits thick mattresses. Includes 4 pillowcases. Soft, durable, and launders beautifully.</div>
+      <a href="https://amzn.to/4wLrm08" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-name">Madison Park Windom Down Alternative King Blanket &mdash; Navy, Satin Trim</div>
+      <div class="product-note">Lightweight all-season blanket with 3M Scotchgard moisture wicking treatment. OEKO TEX certified. Satin trim adds a touch of cabin luxury.</div>
+      <a href="https://amzn.to/4bvakLc" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-name">TasticTotes Clear Storage Bags &mdash; 6 Pack, 40L with Zipper &amp; Handle</div>
+      <div class="product-note">Perfect for storing extra sets of linens, comforters, and blankets in cabin closets. Clear so you can see exactly what&rsquo;s inside.</div>
+      <a href="https://amzn.to/3TEWAY5" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Drift <strong>Currents</strong></span>
+      <span class="footer-tagline">Curated Short-Term Rentals</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://toccoacurrents.com">Toccoa Currents</a>
+      <a href="curated-items.html">Curated Items</a>
+      <a href="index.html#host-services">Host Services</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Drift Currents &middot; All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.querySelector('.nav-drawer-close');
+
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+
+  hamburger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+</script>
+
+</body>
+</html>
