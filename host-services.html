@@ -16,8 +16,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="src/css/style.css" />
   <style>
     .services-hero { background: linear-gradient(160deg, #B8D9F0 0%, #EBF5FB 100%); padding: 60px 24px 40px; text-align: center; }
-    .services-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 16px; }
+    .services-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 10px; }
+    .services-hero .hero-pillars { font-size: clamp(1.2rem, 3vw, 1.7rem); font-weight: bold; color: var(--blue-accent); letter-spacing: 0.04em; margin-bottom: 16px; }
     .services-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; line-height: 1.65; }
+    .pillars-intro { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-bottom: 48px; border-radius: 8px; overflow: hidden; border: 1px solid var(--sky-mid); }
+    .pillar { padding: 28px 24px; text-align: center; }
+    .pillar.setup { background: #EBF5FB; }
+    .pillar.stay { background: #B8D9F0; }
+    .pillar.stream { background: var(--navy); }
+    .pillar-word { font-size: 1.3rem; font-weight: bold; display: block; margin-bottom: 8px; }
+    .pillar.setup .pillar-word, .pillar.stay .pillar-word { color: var(--navy); }
+    .pillar.stream .pillar-word { color: #4ecdc4; }
+    .pillar p { font-size: 0.83rem; line-height: 1.55; margin: 0; }
+    .pillar.setup p, .pillar.stay p { color: #4A5568; }
+    .pillar.stream p { color: #B8D9F0; }
+    @media (max-width: 640px) { .pillars-intro { grid-template-columns: 1fr; } }
+    .phase-header { margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--sky-mid); }
+    .phase-header .phase-word { font-size: 1.25rem; font-weight: bold; color: var(--navy); }
+    .phase-header .phase-desc { font-size: 0.88rem; color: var(--text-muted); margin-left: 12px; }
     .services-section { max-width: 1000px; margin: 0 auto; padding: 60px 24px; }
     .services-section h2 { font-size: 1.6rem; color: var(--navy); margin-bottom: 8px; }
     .services-section .section-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-accent); display: block; margin-bottom: 12px; }
@@ -100,6 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="services-hero">
   <h1>Host Guide</h1>
+  <p class="hero-pillars">Setup. Stay. Stream.</p>
   <p>We built our short-term rental business from scratch in the North Georgia mountains. Now we help other hosts do the same &mdash; right from day one.</p>
 </div>
 
@@ -125,6 +142,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span class="section-label">Paid Services</span>
   <h2>Ready to Launch or Level Up?</h2>
   <p class="section-sub">We work directly with hosts who are starting their first short-term rental or want to improve a listing that is underperforming. Every engagement is hands-on &mdash; not a template, not a course.</p>
+
+  <div class="pillars-intro">
+    <div class="pillar setup">
+      <span class="pillar-word">Setup.</span>
+      <p>Get your property compliant, configured, and live &mdash; equipment, installs, accounts, listing, calendar, and guest messaging.</p>
+    </div>
+    <div class="pillar stay">
+      <span class="pillar-word">Stay.</span>
+      <p>Get found by the right guests. Regional site listing, Facebook presence, and paid ads that put your property in front of travelers already looking.</p>
+    </div>
+    <div class="pillar stream">
+      <span class="pillar-word">Stream.</span>
+      <p>Revenue that flows after checkout. Merch store, Amazon affiliate page, marketing materials, and analytics that show what is working.</p>
+    </div>
+  </div>
 
   <!-- FLOW DIAGRAM -->
   <div class="flow-outer">
@@ -161,6 +193,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="flow-node">
         <div class="flow-bubble bridge">Buy<br>Equipment</div>
         <div class="flow-sub dc">We recommend</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Vendor<br>Referrals</div>
+        <div class="flow-sub dc">Your team</div>
       </div>
       <div class="flow-arrow dc">&rarr;</div>
 
@@ -256,11 +294,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <div class="phase-header">
+    <span class="phase-word">Setup.</span><span class="phase-desc">Get compliant, configured, and live.</span>
+  </div>
   <div class="service-grid">
     <div class="service-card">
       <span class="service-icon">&#x1F6D2;</span>
       <h4>Buy Equipment</h4>
       <p>We do not purchase equipment for you, but we know what works. Our curated items list covers every product category you will need to set up a compliant, guest-ready property. <a href="curated-items.html" style="color: var(--blue-accent); font-weight: bold;">Browse Curated Items &rarr;</a></p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F91D;</span>
+      <h4>Vendor Referrals</h4>
+      <p>Need a photographer, electrician, plumber, or cleaner? We connect you with trusted vendors in your market. We make the intro &mdash; you handle the relationship.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">&#x1F528;</span>
@@ -282,6 +328,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4>Calendar Setup</h4>
       <p>Minimum nights, availability windows, and booking settings configured so your calendar works for you &mdash; not against you.</p>
     </div>
+  </div>
+
+  <div class="phase-header">
+    <span class="phase-word">Stay.</span><span class="phase-desc">Get found, get booked, and take care of your guests.</span>
+  </div>
+  <div class="service-grid">
     <div class="service-card">
       <span class="service-icon">&#x1F4AC;</span>
       <h4>Guest Messaging</h4>
@@ -302,6 +354,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4>Facebook Ads</h4>
       <p>Targeted Facebook ad campaigns for your STR &mdash; we set up your Meta pixel, build your audience, and run ads that put your property in front of the right travelers. Your pixel data also powers retargeting across Drift Currents regional sites.</p>
     </div>
+  </div>
+
+  <div class="phase-header">
+    <span class="phase-word">Stream.</span><span class="phase-desc">Revenue that flows after checkout.</span>
+  </div>
+  <div class="service-grid">
     <div class="service-card">
       <span class="service-icon">&#x1F5BC;</span>
       <h4>Marketing Materials</h4>
@@ -320,18 +378,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="service-card">
       <span class="service-icon">&#x1F4B0;</span>
       <h4>Guest Item$ on Amazon</h4>
-      <p>We build and host a guest items page on a Drift Currents regional site &mdash; your affiliate links, our traffic. Guests scan a QR code, shop what they loved at the cabin, and the commission goes straight to you. Flat monthly hosting fee.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">&#x1F91D;</span>
-      <h4>Vendor Referrals</h4>
-      <p>Need a photographer, electrician, plumber, or cleaner? We connect you with trusted vendors in your market. We make the intro &mdash; you handle the relationship.</p>
+      <p>We build and host a guest items page on a Drift Currents regional site &mdash; your affiliate links, our traffic. Guests scan a QR code, shop what they loved at the property, and the commission goes straight to you. Flat monthly hosting fee.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">&#x1F4CA;</span>
       <h4>Analytics</h4>
       <p>Competitor analysis and performance tracking to understand how your listing is doing and where the gaps are.</p>
     </div>
+  </div>
+
+  <div style="background: var(--navy); border-radius: 8px; padding: 36px 32px; margin-bottom: 40px; text-align: center;">
+    <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: #4ecdc4; margin-bottom: 10px;">Coming Soon</p>
+    <p style="font-size: 1.2rem; font-weight: bold; color: #ffffff; margin-bottom: 8px;">STR Host Guide: Setup. Stay. Stream.</p>
+    <p style="font-size: 0.9rem; color: #B8D9F0; line-height: 1.65; max-width: 520px; margin: 0 auto;">The principles behind this guide are the foundation of our upcoming book &mdash; a step-by-step playbook for new and existing STR hosts. Coming soon on Amazon.</p>
   </div>
 
   <div style="text-align: center; margin-top: 8px;">
