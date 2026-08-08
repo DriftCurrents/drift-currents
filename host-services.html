@@ -32,6 +32,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .free-block-text p { font-size: 0.95rem; color: #4A5568; line-height: 1.65; margin: 0; max-width: 520px; }
     .divider { border: none; border-top: 2px solid var(--sky-mid); margin: 0 0 60px; }
     @media (max-width: 640px) { .free-block { flex-direction: column; } .free-block a { width: 100%; text-align: center; } }
+
+    /* FLOW DIAGRAM */
+    .flow-outer { overflow-x: auto; margin: 40px 0 52px; padding-bottom: 8px; }
+    .flow-track { display: flex; align-items: flex-start; gap: 0; min-width: 900px; }
+    .flow-node { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 88px; }
+    .flow-bubble { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.63rem; font-weight: bold; line-height: 1.35; padding: 8px; box-sizing: border-box; }
+    .flow-bubble.prereq { background: transparent; border: 2px dashed #b0b8c4; color: #8a94a0; }
+    .flow-bubble.dc { background: var(--navy); color: #ffffff; border: 2px solid var(--navy); }
+    .flow-sub { font-size: 0.6rem; color: #8a94a0; margin-top: 6px; text-align: center; line-height: 1.4; max-width: 80px; }
+    .flow-sub.dc { color: var(--blue-accent); }
+    .flow-arrow { flex-shrink: 0; font-size: 1.1rem; color: #b0b8c4; padding: 0 2px; margin-top: 24px; line-height: 1; }
+    .flow-arrow.dc { color: var(--navy); }
+    .flow-divider { display: flex; flex-direction: column; align-items: center; margin: 0 6px; margin-top: 16px; }
+    .flow-divider-line { width: 2px; height: 40px; background: var(--sky-mid); }
+    .flow-section-labels { display: flex; gap: 0; min-width: 900px; margin-bottom: 6px; }
+    .flow-section-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: bold; text-align: center; }
+    .flow-section-label.prereq { color: #8a94a0; width: calc(88px * 4 + 28px * 3); }
+    .flow-section-label.dc { color: var(--blue-accent); flex: 1; }
   </style>
 </head>
 <body>
@@ -96,7 +114,113 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Ready to Launch or Level Up?</h2>
   <p class="section-sub">We work directly with hosts who are starting their first short-term rental or want to improve a listing that is underperforming. Every engagement is hands-on &mdash; not a template, not a course.</p>
 
+  <!-- FLOW DIAGRAM -->
+  <div class="flow-outer">
+    <div class="flow-section-labels">
+      <div class="flow-section-label prereq">Before You Start</div>
+      <div class="flow-section-label dc">Drift Currents Handles</div>
+    </div>
+    <div class="flow-track">
+
+      <div class="flow-node">
+        <div class="flow-bubble prereq">Buy<br>Property</div>
+        <div class="flow-sub">Step one</div>
+      </div>
+      <div class="flow-arrow">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble prereq">Business<br>Setup</div>
+        <div class="flow-sub">LLC &middot; EIN</div>
+      </div>
+      <div class="flow-arrow">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble prereq">Financial<br>Setup</div>
+        <div class="flow-sub">Bank &middot; Cards</div>
+      </div>
+      <div class="flow-arrow">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble prereq">Register<br>STR</div>
+        <div class="flow-sub">Local gov</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Property<br>Setup</div>
+        <div class="flow-sub dc">Installs</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Account<br>Setup</div>
+        <div class="flow-sub dc">Airbnb</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Listing<br>Setup</div>
+        <div class="flow-sub dc">Go live</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Calendar<br>Setup</div>
+        <div class="flow-sub dc">Fill dates</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Guest<br>Messaging</div>
+        <div class="flow-sub dc">Automate</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Regional<br>Site</div>
+        <div class="flow-sub dc">More reach</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Facebook<br>Setup</div>
+        <div class="flow-sub dc">Social</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Marketing<br>Materials</div>
+        <div class="flow-sub dc">Rack cards</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Amazon<br>Associates</div>
+        <div class="flow-sub dc">Earn</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Guest<br>Item$</div>
+        <div class="flow-sub dc">Host page</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Analytics</div>
+        <div class="flow-sub dc">Optimize</div>
+      </div>
+
+    </div>
+  </div>
+  <p style="font-size:0.78rem; color:var(--text-muted); font-style:italic; margin: -32px 0 48px;">We are not attorneys or CPAs. Consult your own professionals for business entity formation, tax setup, and financial accounts.</p>
+
   <div class="service-grid">
+    <div class="service-card">
+      <span class="service-icon">&#x1F528;</span>
+      <h4>Property Setup</h4>
+      <p>One-time installs before your first guest arrives &mdash; Moen Flo leak detector, Ring contact sensors on owner areas and windows, Ecobee thermostat setup. We install. We do not manage.</p>
+    </div>
     <div class="service-card">
       <span class="service-icon">&#x1F511;</span>
       <h4>Account Setup</h4>
@@ -121,6 +245,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="service-icon">&#x1F5FA;</span>
       <h4>List on a Regional Site</h4>
       <p>Get your property featured on a Drift Currents regional site &mdash; SoFlo Currents, Golden Currents, and future destination brands. Direct booking traffic from a curated audience already looking in your market.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4D8;</span>
+      <h4>Facebook Setup</h4>
+      <p>A professional Facebook page for your STR &mdash; business profile, branding, and initial content setup so guests can find and follow your property.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F5BC;</span>
+      <h4>Marketing Materials</h4>
+      <p>Design and order print materials for your property &mdash; rack cards, coffee mugs, coasters, and more, each with a QR code tied to UTM-tracked links so you know exactly what is driving traffic.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F6CD;</span>
+      <h4>Amazon Associate Setup</h4>
+      <p>We get you approved for Amazon Associates and set up your first affiliate links &mdash; so every product recommendation your guests see can earn you a commission.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4B0;</span>
+      <h4>Guest Item$ on Amazon</h4>
+      <p>We build and host a guest items page on a Drift Currents regional site &mdash; your affiliate links, our traffic. Guests scan a QR code, shop what they loved at the cabin, and the commission goes straight to you. Flat monthly hosting fee.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F91D;</span>
+      <h4>Vendor Referrals</h4>
+      <p>Need a photographer, electrician, plumber, or cleaner? We connect you with trusted vendors in your market. We make the intro &mdash; you handle the relationship.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">&#x1F4CA;</span>
