@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-544FD6C6');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Drift Currents STR vendor network. Vetted local vendors across every Drift Currents region. Get listed or request host access." />
+  <title>STR Vendor Network | Drift Currents</title>
+  <link rel="canonical" href="https://driftcurrents.com/vendors" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <style>
+    .vendors-hero { background: linear-gradient(160deg, var(--navy) 0%, var(--blue-accent) 100%); padding: 100px 24px 64px; text-align: center; }
+    .vendors-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 16px; }
+    .vendors-hero p { font-size: 1.05rem; color: var(--sky-mid); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    .hero-wave { line-height: 0; }
+    .hero-wave svg { display: block; width: 100%; }
+    .vendors-body { max-width: 960px; margin: 0 auto; padding: 64px 24px 80px; }
+    .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 20px; }
+    .vendors-intro { font-size: 1rem; line-height: 1.85; color: var(--navy); margin-bottom: 56px; }
+    .region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-bottom: 64px; }
+    .region-card { border-radius: 8px; padding: 28px 24px; border: 1px solid var(--sky-mid); }
+    .region-card.active { background: var(--navy); border-color: var(--navy); }
+    .region-card.coming { background: var(--sky-light); border-color: var(--sky-mid); }
+    .region-card .region-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .region-card.active .region-label { color: var(--sky-mid); }
+    .region-card.coming .region-label { color: var(--text-muted); }
+    .region-card .region-name { font-size: 1.15rem; font-weight: bold; margin-bottom: 4px; }
+    .region-card.active .region-name { color: var(--white); }
+    .region-card.coming .region-name { color: var(--navy); }
+    .region-card .region-site { font-size: 0.85rem; }
+    .region-card.active .region-site { color: var(--sky-mid); }
+    .region-card.coming .region-site { color: var(--text-muted); font-style: italic; }
+    .category-section { margin-bottom: 64px; }
+    .category-section h2 { font-size: 1.25rem; color: var(--navy); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--sky-mid); }
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+    .category-pill { background: var(--sky-light); border: 1px solid var(--sky-mid); border-radius: 8px; padding: 16px 14px; display: flex; align-items: center; gap: 12px; }
+    .category-pill .cat-icon { font-size: 1.3rem; line-height: 1; }
+    .category-pill .cat-name { font-size: 0.9rem; font-weight: bold; color: var(--navy); }
+    .two-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cta-block { border-radius: 8px; padding: 40px 32px; text-align: center; }
+    .cta-block.vendor { background: var(--navy); }
+    .cta-block.host { background: var(--blue-accent); }
+    .cta-block h2 { font-size: 1.3rem; color: var(--white); margin-bottom: 10px; }
+    .cta-block p { font-size: 0.92rem; color: var(--sky-mid); line-height: 1.65; margin-bottom: 24px; }
+    .cta-block .btn-cta { display: inline-block; background: var(--white); color: var(--navy); padding: 13px 28px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s; }
+    .cta-block .btn-cta:hover { opacity: 0.88; }
+    .network-note { background: var(--sky-light); border: 1px solid var(--sky-mid); border-radius: 8px; padding: 20px 24px; margin-bottom: 64px; font-size: 0.92rem; color: var(--navy); line-height: 1.7; }
+    .network-note strong { color: var(--blue-accent); }
+    @media (max-width: 640px) { .two-cta { grid-template-columns: 1fr; } .cta-block { padding: 32px 24px; } .region-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-544FD6C6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <a href="index.html" class="nav-logo">Drift <span>Currents</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li><a href="host-services.html">Host Guide</a></li>
+    <li><a href="host-blog/">Host Blog</a></li>
+    <li><a href="guest-blog/">Guest Blog</a></li>
+    <li><a href="curated-items.html">Curated Items</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#connect">Connect</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
+  <ul>
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li><a href="host-services.html">Host Guide</a></li>
+    <li><a href="host-blog/">Host Blog</a></li>
+    <li><a href="guest-blog/">Guest Blog</a></li>
+    <li><a href="curated-items.html">Curated Items</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#connect">Connect</a></li>
+  </ul>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="vendors-hero">
+  <h1>STR Vendor Network</h1>
+  <p>Vetted local vendors across every Drift Currents region. One directory. Every market. The trades, services, and professionals STR hosts need — curated so you do not have to find them cold.</p>
+</div>
+
+<div class="hero-wave">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C180,50 360,0 540,25 C720,50 900,5 1080,30 C1260,55 1350,15 1440,25 L1440,60 L0,60 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<div class="vendors-body">
+
+  <p class="vendors-intro">Finding reliable vendors in an unfamiliar market is one of the hardest parts of launching an STR. The wrong cleaner costs you reviews. The wrong electrician costs you your permit. The Drift Currents vendor network exists to solve this. Every vendor listed has been vetted in their market. One or two per category. No cold calls.</p>
+
+  <div class="network-note">
+    <strong>Network listing:</strong> Vendors who list at the network tier appear across all active Drift Currents regional sites. Regional listing places you on a single market site. Contact us to discuss which tier fits your business.
+  </div>
+
+  <p class="section-label">Active and Upcoming Regions</p>
+  <div class="region-grid">
+    <div class="region-card active">
+      <div class="region-label">Active</div>
+      <div class="region-name">North Georgia Mountains</div>
+      <div class="region-site">Toccoa Currents &mdash; toccoacurrents.com</div>
+    </div>
+    <div class="region-card coming">
+      <div class="region-label">Coming Soon</div>
+      <div class="region-name">South Florida</div>
+      <div class="region-site">SoFlo Currents</div>
+    </div>
+    <div class="region-card coming">
+      <div class="region-label">Coming Soon</div>
+      <div class="region-name">Golden Isles, Georgia</div>
+      <div class="region-site">Golden Currents</div>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <h2>Vendor Categories</h2>
+    <div class="category-grid">
+      <div class="category-pill"><span class="cat-icon">&#x1F3E1;</span><span class="cat-name">Real Estate</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F3E0;</span><span class="cat-name">Home Design</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F4F7;</span><span class="cat-name">Photography</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x26A1;</span><span class="cat-name">Electrician</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F6B0;</span><span class="cat-name">Plumber</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x2744;&#xFE0F;</span><span class="cat-name">HVAC</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F527;</span><span class="cat-name">Handyman</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F33F;</span><span class="cat-name">Landscaping</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F41C;</span><span class="cat-name">Pest Control</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F4A7;</span><span class="cat-name">Septic</span></div>
+      <div class="category-pill"><span class="cat-icon">&#x1F9F9;</span><span class="cat-name">Cleaning</span></div>
+    </div>
+  </div>
+
+  <div class="two-cta">
+    <div class="cta-block vendor">
+      <h2>Are You a Local Vendor?</h2>
+      <p>Get your business in front of STR hosts across the Drift Currents network. Regional or network-wide placement. Flat annual fee. No commissions.</p>
+      <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Drift Currents Network" class="btn-cta">Get Listed</a>
+    </div>
+    <div class="cta-block host">
+      <h2>Are You an STR Host?</h2>
+      <p>The full directory with vendor contact info, credentials, and service areas is available to hosts. Contact us to request access for your region.</p>
+      <a href="mailto:driftcurrents@gmail.com?subject=Vendor Directory Access Request — Drift Currents" class="btn-cta">Request Access</a>
+    </div>
+  </div>
+
+</div>
+
+<footer style="background: var(--navy); color: var(--sky-light); text-align: center; padding: 40px 24px; font-size: 0.88rem; line-height: 1.8;">
+  <p style="margin-bottom: 0.4rem;"><strong style="color: var(--white);">Drift Currents</strong> &nbsp;&middot;&nbsp; Curated Short-Term Rentals Across the Southeast</p>
+  <p>
+    <a href="index.html" style="color: var(--sky-mid); text-decoration: none;">Home</a> &nbsp;&middot;&nbsp;
+    <a href="host-services.html" style="color: var(--sky-mid); text-decoration: none;">Host Guide</a> &nbsp;&middot;&nbsp;
+    <a href="curated-items.html" style="color: var(--sky-mid); text-decoration: none;">Curated Items</a> &nbsp;&middot;&nbsp;
+    <a href="vendors.html" style="color: var(--sky-mid); text-decoration: none;">Vendors</a>
+  </p>
+  <p style="margin-top: 0.8rem; font-size: 0.75rem; opacity: 0.5;">&copy; Drift Currents &middot; All rights reserved</p>
+  <p style="margin-top: 0.4rem; font-size: 0.75rem; opacity: 0.8;">
+    <a href="privacy-policy.html" style="color: inherit;">Privacy Policy</a>
+  </p>
+</footer>
+
+<script src="src/js/main.js"></script>
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.querySelector('.nav-drawer-close');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+  hamburger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+</script>
+
+</body>
+</html>
