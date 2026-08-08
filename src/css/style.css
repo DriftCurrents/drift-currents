@@ -106,6 +106,56 @@ nav {
 
 .nav-overlay.open { display: block; }
 
+/* ---- DROPDOWN NAV ---- */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--sky-mid);
+  border-radius: 6px;
+  min-width: 188px;
+  box-shadow: 0 4px 16px rgba(13,59,94,0.1);
+  z-index: 300;
+  padding: 6px 0;
+  list-style: none;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
+.nav-dropdown-menu li { margin: 0; }
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 9px 16px;
+  color: var(--navy);
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-dropdown-menu a:hover { background: var(--sky-light); color: var(--blue-accent); }
+
+.nav-caret { font-size: 0.55rem; vertical-align: middle; margin-left: 3px; }
+
+/* ---- MOBILE DRAWER GROUPS ---- */
+.drawer-group-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding: 16px 0 4px;
+  margin-bottom: 0 !important;
+  cursor: default;
+}
+
+.drawer-sub { margin-bottom: 14px !important; }
+.drawer-sub a { padding-left: 16px; font-size: 0.95rem !important; color: var(--text-muted) !important; }
+
 /* ---- HERO ---- */
 .hero {
   position: relative;
@@ -177,7 +227,6 @@ nav {
 
 /* ---- SECTION HEADINGS ---- */
 .destinations h2,
-.host-services h2,
 .essentials h2,
 .about h2,
 .connect h2 {
@@ -266,33 +315,73 @@ nav {
 
 .dest-link.coming { color: var(--text-muted); font-weight: normal; font-style: italic; }
 
-/* ---- HOST SERVICES ---- */
-.host-services {
-  background: var(--sky-light);
-  padding: 80px 24px;
+/* ---- HOST TEASER ---- */
+.host-teaser {
+  background: var(--navy);
+  padding: 72px 24px;
   text-align: center;
 }
 
-.host-inner { max-width: 900px; margin: 0 auto; }
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  margin: 48px 0;
-  text-align: left;
+.host-teaser-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--sky-mid);
+  margin-bottom: 36px;
 }
 
-.service-item {
+.host-phases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.host-phase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+}
+
+.phase-icon { font-size: 2.2rem; line-height: 1; }
+.phase-name { font-size: 1.15rem; font-weight: bold; color: var(--white); }
+.phase-desc { font-size: 0.78rem; color: var(--sky-mid); }
+
+.phase-arrow {
+  font-size: 1.4rem;
+  color: var(--sky-mid);
+  padding-bottom: 22px;
+}
+
+.host-teaser-sub {
+  font-size: 1rem;
+  color: var(--sky-mid);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.btn-host-teaser {
+  display: inline-block;
   background: var(--white);
-  border-radius: 8px;
-  padding: 24px;
-  border: 1px solid var(--sky-mid);
+  color: var(--navy);
+  padding: 13px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
 }
 
-.service-icon { font-size: 1.8rem; display: block; margin-bottom: 12px; }
-.service-item h4 { font-size: 1.05rem; margin-bottom: 8px; color: var(--navy); }
-.service-item p { font-size: 0.88rem; color: #4A5568; line-height: 1.5; }
+.btn-host-teaser:hover { opacity: 0.88; }
+
+@media (max-width: 500px) {
+  .phase-arrow { display: none; }
+  .host-phases { gap: 28px; }
+}
 
 /* ---- CABIN ESSENTIALS ---- */
 .essentials {

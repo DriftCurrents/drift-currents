@@ -26,12 +26,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#" class="nav-logo">Drift <span>Currents</span></a>
   <ul class="nav-links">
     <li><a href="#destinations">Our Destinations</a></li>
-    <li><a href="host-services.html">Host Guide</a></li>
-    <li><a href="host-blog/">Host Blog</a></li>
-    <li><a href="guest-blog/">Guest Blog</a></li>
-    <li><a href="curated-items.html">Curated Items</a></li>
+    <li class="nav-dropdown">
+      <a href="host-services.html" class="nav-dropdown-toggle">Host <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="host-blog/">Host Blog</a></li>
+        <li><a href="host-services.html">Host Guide</a></li>
+        <li><a href="vendors.html">Vendor Directory</a></li>
+        <li><a href="curated-items.html">Curated Items</a></li>
+        <li><a href="mailto:driftcurrents@gmail.com">Contact</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="guest-blog/" class="nav-dropdown-toggle">Guest <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="guest-blog/">Guest Blog</a></li>
+        <li><a href="curated-items-guest.html">Curated Items</a></li>
+      </ul>
+    </li>
     <li><a href="#about">About</a></li>
-    <li><a href="#connect">Connect</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
 </nav>
@@ -41,12 +53,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
   <ul>
     <li><a href="#destinations">Our Destinations</a></li>
-    <li><a href="host-services.html">Host Guide</a></li>
-    <li><a href="host-blog/">Host Blog</a></li>
-    <li><a href="guest-blog/">Guest Blog</a></li>
-    <li><a href="curated-items.html">Curated Items</a></li>
+    <li class="drawer-group-label">Host</li>
+    <li class="drawer-sub"><a href="host-blog/">Host Blog</a></li>
+    <li class="drawer-sub"><a href="host-services.html">Host Guide</a></li>
+    <li class="drawer-sub"><a href="vendors.html">Vendor Directory</a></li>
+    <li class="drawer-sub"><a href="curated-items.html">Curated Items</a></li>
+    <li class="drawer-sub"><a href="mailto:driftcurrents@gmail.com">Contact</a></li>
+    <li class="drawer-group-label">Guest</li>
+    <li class="drawer-sub"><a href="guest-blog/">Guest Blog</a></li>
+    <li class="drawer-sub"><a href="curated-items-guest.html">Curated Items</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#connect">Connect</a></li>
   </ul>
 </div>
 <div class="nav-overlay" id="navOverlay"></div>
@@ -123,49 +139,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </svg>
 </div>
 
-<!-- HOST SERVICES -->
-<section class="host-services" id="host-services">
-  <div class="host-inner">
-    <h2>Host Guide</h2>
-    <p class="section-sub">Thinking about launching a short-term rental? We&rsquo;ve done it &mdash; and we can help you do it right from day one. And the book is coming.</p>
-    <div class="service-grid">
-      <div class="service-item">
-        <span class="service-icon">&#x1F3E0;</span>
-        <h4>Listing Setup</h4>
-        <p>Professional listing creation on Airbnb and VRBO &mdash; titles, descriptions, pricing strategy, and photo guidance.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">&#x1F4CB;</span>
-        <h4>Rule Sets &amp; Policies</h4>
-        <p>Booking rules, minimum nights, seasonal strategies, and house policies that protect your property.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">&#x1F4AC;</span>
-        <h4>Guest Communication</h4>
-        <p>Automated message templates from booking confirmation through checkout &mdash; so you never miss a beat.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">&#x1F4CA;</span>
-        <h4>Analytics &amp; Pricing</h4>
-        <p>Data-driven pricing insights, competitor analysis, and performance tracking to maximize revenue.</p>
-      </div>
-    </div>
-    <a href="host-services.html" class="btn-primary">Get Started</a>
-  </div>
-</section>
-
-<!-- WAVE DIVIDER -->
-<div class="wave-divider flip">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,45 C180,10 360,65 540,30 C720,0 900,55 1080,25 C1260,0 1350,50 1440,30 L1440,0 L0,0 Z" fill="#B8D9F0"/>
-  </svg>
-</div>
-
 <!-- CABIN ESSENTIALS -->
 <section class="essentials" id="essentials">
   <h2>Curated Items</h2>
   <p class="section-sub">Everything we stock our properties with &mdash; curated for hosts and guests alike. Shop our Amazon picks and support Drift Currents at no extra cost to you.</p>
-  <a href="curated-items.html" class="btn-primary">Browse Our Curated Items</a>
+  <a href="curated-items-guest.html" class="btn-primary">Browse Curated Items</a>
 </section>
 
 <!-- ABOUT -->
@@ -177,11 +155,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CONNECT -->
-<section class="connect" id="connect">
-  <h2>Connect With Us</h2>
-  <p>Questions about our properties or host services? We&rsquo;d love to hear from you.</p>
-  <a href="mailto:driftcurrents@gmail.com" class="btn-primary">Email Us</a>
+<!-- WAVE DIVIDER -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C180,60 360,0 540,35 C720,70 900,10 1080,40 C1260,70 1350,20 1440,35 L1440,80 L0,80 Z" fill="#B8D9F0"/>
+  </svg>
+</div>
+
+<!-- HOST TEASER -->
+<section class="host-teaser" id="host-services">
+  <p class="host-teaser-label">Are you an STR host?</p>
+  <div class="host-phases">
+    <div class="host-phase">
+      <span class="phase-icon">&#x2699;&#xFE0F;</span>
+      <span class="phase-name">Setup</span>
+      <span class="phase-desc">Property ready</span>
+    </div>
+    <span class="phase-arrow">&rarr;</span>
+    <div class="host-phase">
+      <span class="phase-icon">&#x1F3E0;</span>
+      <span class="phase-name">Stay</span>
+      <span class="phase-desc">Guests flowing</span>
+    </div>
+    <span class="phase-arrow">&rarr;</span>
+    <div class="host-phase">
+      <span class="phase-icon">&#x1F4E1;</span>
+      <span class="phase-name">Stream</span>
+      <span class="phase-desc">Revenue on autopilot</span>
+    </div>
+  </div>
+  <p class="host-teaser-sub">We built the playbook. Now it&rsquo;s yours.</p>
+  <a href="host-services.html" class="btn-host-teaser">Read the Host Guide &rarr;</a>
 </section>
 
 <!-- FOOTER -->
