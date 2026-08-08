@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Drift Currents Host Services — we help short-term rental hosts launch and grow their STR businesses. Listing setup, pricing strategy, guest communication, and more." />
-  <title>Host Services | Drift Currents</title>
+  <meta name="description" content="Drift Currents Host Guide — STR host guidance for every stage of your journey. Launch from scratch or plug in where you are. Listing setup, Facebook ads, merch, Amazon affiliate pages, and more." />
+  <title>Host Guide | Drift Currents</title>
   <link rel="canonical" href="https://driftcurrents.com/host-services.html" />
   <link rel="stylesheet" href="src/css/style.css" />
   <style>
@@ -22,6 +22,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .services-section h2 { font-size: 1.6rem; color: var(--navy); margin-bottom: 8px; }
     .services-section .section-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-accent); display: block; margin-bottom: 12px; }
     .services-section .section-sub { color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 36px; max-width: 680px; }
+    .two-path { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--sky-mid); border-radius: 8px; overflow: hidden; margin-bottom: 48px; }
+    .two-path-panel { padding: 32px 28px; }
+    .two-path-panel.new { background: #EBF5FB; }
+    .two-path-panel.existing { background: var(--navy); }
+    .two-path-panel h3 { font-size: 1.05rem; margin-bottom: 12px; }
+    .two-path-panel.new h3 { color: var(--navy); }
+    .two-path-panel.existing h3 { color: #ffffff; }
+    .two-path-panel p { font-size: 0.88rem; line-height: 1.65; margin: 0; }
+    .two-path-panel.new p { color: #4A5568; }
+    .two-path-panel.existing p { color: #B8D9F0; }
+    @media (max-width: 640px) { .two-path { grid-template-columns: 1fr; } }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; margin-bottom: 40px; }
     .service-card { background: var(--white); border: 1px solid var(--sky-mid); border-radius: 8px; padding: 28px 24px; }
     .service-card .service-icon { font-size: 2rem; display: block; margin-bottom: 14px; }
@@ -40,6 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .flow-bubble { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.63rem; font-weight: bold; line-height: 1.35; padding: 8px; box-sizing: border-box; }
     .flow-bubble.prereq { background: transparent; border: 2px dashed #b0b8c4; color: #8a94a0; }
     .flow-bubble.dc { background: var(--navy); color: #ffffff; border: 2px solid var(--navy); }
+    .flow-bubble.bridge { background: linear-gradient(135deg, #b0b8c4 50%, #0d3b5e 50%); color: #ffffff; border: none; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
     .flow-sub { font-size: 0.6rem; color: #8a94a0; margin-top: 6px; text-align: center; line-height: 1.4; max-width: 80px; }
     .flow-sub.dc { color: var(--blue-accent); }
     .flow-arrow { flex-shrink: 0; font-size: 1.1rem; color: #b0b8c4; padding: 0 2px; margin-top: 24px; line-height: 1; }
@@ -62,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="index.html" class="nav-logo">Drift <span>Currents</span></a>
   <ul class="nav-links">
     <li><a href="index.html#destinations">Our Destinations</a></li>
-    <li><a href="host-services.html">Host Services</a></li>
+    <li><a href="host-services.html">Host Guide</a></li>
     <li><a href="host-blog/">Host Blog</a></li>
     <li><a href="guest-blog/">Guest Blog</a></li>
     <li><a href="curated-items.html">Curated Items</a></li>
@@ -76,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
   <ul>
     <li><a href="index.html#destinations">Our Destinations</a></li>
-    <li><a href="host-services.html">Host Services</a></li>
+    <li><a href="host-services.html">Host Guide</a></li>
     <li><a href="host-blog/">Host Blog</a></li>
     <li><a href="guest-blog/">Guest Blog</a></li>
     <li><a href="curated-items.html">Curated Items</a></li>
@@ -87,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="nav-overlay" id="navOverlay"></div>
 
 <div class="services-hero">
-  <h1>Host Services</h1>
+  <h1>Host Guide</h1>
   <p>We built our short-term rental business from scratch in the North Georgia mountains. Now we help other hosts do the same &mdash; right from day one.</p>
 </div>
 
@@ -141,8 +153,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="flow-arrow">&rarr;</div>
 
       <div class="flow-node">
-        <div class="flow-bubble prereq">Register<br>STR</div>
-        <div class="flow-sub">Local gov</div>
+        <div class="flow-bubble prereq">STR<br>Ordinances</div>
+        <div class="flow-sub">Know the rules</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble bridge">Buy<br>Equipment</div>
+        <div class="flow-sub dc">We recommend</div>
       </div>
       <div class="flow-arrow dc">&rarr;</div>
 
@@ -189,8 +207,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="flow-arrow dc">&rarr;</div>
 
       <div class="flow-node">
+        <div class="flow-bubble dc">Facebook<br>Ads</div>
+        <div class="flow-sub dc">Paid reach</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
         <div class="flow-bubble dc">Marketing<br>Materials</div>
         <div class="flow-sub dc">Rack cards</div>
+      </div>
+      <div class="flow-arrow dc">&rarr;</div>
+
+      <div class="flow-node">
+        <div class="flow-bubble dc">Printify<br>Store</div>
+        <div class="flow-sub dc">Merch</div>
       </div>
       <div class="flow-arrow dc">&rarr;</div>
 
@@ -215,7 +245,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <p style="font-size:0.78rem; color:var(--text-muted); font-style:italic; margin: -32px 0 48px;">We are not attorneys or CPAs. Consult your own professionals for business entity formation, tax setup, and financial accounts.</p>
 
+  <div class="two-path">
+    <div class="two-path-panel new">
+      <h3>Starting from scratch?</h3>
+      <p>We walk you through every step &mdash; from buying your first piece of compliant equipment to your first five-star review. Full guided launch, start to finish.</p>
+    </div>
+    <div class="two-path-panel existing">
+      <h3>Already running an STR?</h3>
+      <p>Most existing hosts have the basics covered but are leaving money on the table. No Facebook ads. No Amazon affiliate page. No merch. No regional listing. We can plug in wherever you are.</p>
+    </div>
+  </div>
+
   <div class="service-grid">
+    <div class="service-card">
+      <span class="service-icon">&#x1F6D2;</span>
+      <h4>Buy Equipment</h4>
+      <p>We do not purchase equipment for you, but we know what works. Our curated items list covers every product category you will need to set up a compliant, guest-ready property. <a href="curated-items.html" style="color: var(--blue-accent); font-weight: bold;">Browse Curated Items &rarr;</a></p>
+    </div>
     <div class="service-card">
       <span class="service-icon">&#x1F528;</span>
       <h4>Property Setup</h4>
@@ -252,9 +298,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>A professional Facebook page for your STR &mdash; business profile, branding, and initial content setup so guests can find and follow your property.</p>
     </div>
     <div class="service-card">
+      <span class="service-icon">&#x1F4F2;</span>
+      <h4>Facebook Ads</h4>
+      <p>Targeted Facebook ad campaigns for your STR &mdash; we set up your Meta pixel, build your audience, and run ads that put your property in front of the right travelers. Your pixel data also powers retargeting across Drift Currents regional sites.</p>
+    </div>
+    <div class="service-card">
       <span class="service-icon">&#x1F5BC;</span>
       <h4>Marketing Materials</h4>
       <p>Design and order print materials for your property &mdash; rack cards, coffee mugs, coasters, and more, each with a QR code tied to UTM-tracked links so you know exactly what is driving traffic.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F6CD;</span>
+      <h4>Printify Store Setup</h4>
+      <p>We build and launch your Printify merch store &mdash; branded mugs, tumblers, coasters, and apparel your guests can order long after checkout. A passive revenue stream tied directly to your property brand.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">&#x1F6CD;</span>
@@ -294,7 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-links">
       <a href="https://toccoacurrents.com">Toccoa Currents</a>
       <a href="curated-items.html">Curated Items</a>
-      <a href="host-services.html">Host Services</a>
+      <a href="host-services.html">Host Guide</a>
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>
     <div class="footer-copy">&copy; Drift Currents &middot; All rights reserved</div>
