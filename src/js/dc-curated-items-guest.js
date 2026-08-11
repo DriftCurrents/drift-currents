@@ -16,11 +16,13 @@ function renderDCGuestItems(regionArrays, containerSelector) {
         opacity:0; transition:opacity 0.2s; pointer-events:none; z-index:10; }
       .dc-guest-items .product-card { position:relative; }
       .dc-guest-items .product-card:hover .dc-ci-badge { opacity:1; }
-      .dc-guest-items .ci-gallery { display:flex; width:100%; overflow-x:auto; scroll-snap-type:x mandatory;
-        margin-bottom:10px; border-radius:6px; scrollbar-width:none; -ms-overflow-style:none; }
+      .dc-guest-items .ci-gallery-wrap { position:relative; margin-bottom:10px; }
+      .dc-guest-items .ci-gallery { display:grid; grid-auto-flow:column; grid-auto-columns:100%; overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; border-radius:6px; scrollbar-width:none; -ms-overflow-style:none; }
       .dc-guest-items .ci-gallery::-webkit-scrollbar { display:none; }
-      .dc-guest-items .ci-photo { flex:0 0 100%; width:100%; aspect-ratio:4/3; object-fit:cover;
-        border-radius:6px; scroll-snap-align:start; }
+      .dc-guest-items .ci-photo { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; scroll-snap-align:start; display:block; }
+      .dc-guest-items .ci-arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.45); color:#fff; border:none; border-radius:50%; width:28px; height:28px; font-size:1rem; line-height:1; cursor:pointer; z-index:5; display:flex; align-items:center; justify-content:center; padding:0; }
+      .dc-guest-items .ci-arrow-prev { left:6px; }
+      .dc-guest-items .ci-arrow-next { right:6px; }
     `;
     document.head.appendChild(s);
   }
@@ -64,7 +66,7 @@ function renderDCGuestItems(regionArrays, containerSelector) {
         ${section.cards.map(card => `
           <div class="product-card" data-id="${card.id}">
             <span class="dc-ci-badge">${card.id}</span>
-            ${card.imgs && card.imgs.length ? `<div class="ci-gallery">${card.imgs.map(img => `<img class="ci-photo" src="${img}" alt="${card.id}" loading="lazy">`).join('')}</div>` : ''}
+            ${card.imgs && card.imgs.length === 1 ? `<img class="ci-photo" src="${card.imgs[0]}" alt="${card.id}" loading="lazy" style="margin-bottom:10px;">` : card.imgs && card.imgs.length > 1 ? `<div class="ci-gallery-wrap"><div class="ci-gallery">${card.imgs.map(img => `<img class="ci-photo" src="${img}" alt="${card.id}" loading="lazy">`).join('')}</div><button class="ci-arrow ci-arrow-prev" onclick="this.parentElement.querySelector('.ci-gallery').scrollBy({left:-this.parentElement.querySelector('.ci-gallery').offsetWidth,behavior:'smooth'})">&#8249;</button><button class="ci-arrow ci-arrow-next" onclick="this.parentElement.querySelector('.ci-gallery').scrollBy({left:this.parentElement.querySelector('.ci-gallery').offsetWidth,behavior:'smooth'})">&#8250;</button></div>` : ''}
             <div class="product-name">${card.name}</div>
             <div class="product-note">${card.note}</div>
             <a href="${card.href}" class="product-link" target="_blank" rel="noopener">View on Amazon</a>
