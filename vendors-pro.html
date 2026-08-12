@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-544FD6C6');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Full STR vendor directory for Drift Currents hosts. Vetted vendors across Toccoa Currents, SoFlo Currents, and Golden Isles regions." />
+  <title>Host Vendor Directory | Drift Currents</title>
+  <link rel="canonical" href="https://driftcurrents.com/vendors-pro" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <style>
+    /* ===== HERO ===== */
+    .vendors-hero { background: linear-gradient(160deg, var(--navy) 0%, var(--blue-accent) 100%); padding: 100px 24px 56px; text-align: center; }
+    .vendors-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 16px; }
+    .vendors-hero p { font-size: 1.05rem; color: var(--sky-mid); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: var(--white); font-size: 0.75rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
+
+    /* ===== WAVE TRANSITIONS ===== */
+    .zone-wave { line-height: 0; display: block; }
+    .zone-wave svg { display: block; width: 100%; }
+
+    /* ===== REGION PANEL (Zone 2 — light blue) ===== */
+    .vendors-region-panel { background: #e8f2fb; padding: 48px 24px 56px; }
+    .vendors-region-inner { max-width: 1100px; margin: 0 auto; }
+    .vendors-intro { font-size: 1rem; line-height: 1.85; color: var(--navy); margin-bottom: 32px; }
+    .section-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.13em; color: #5580a0; margin-bottom: 18px; }
+    .vendors-region-panel .destination-cards { justify-content: center; }
+
+    /* ===== REGION FILTER BAR ===== */
+    .filter-bar { background: var(--white); border-bottom: 1px solid var(--sky-mid); padding: 16px 24px; position: sticky; top: 0; z-index: 90; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .filter-label { font-size: 0.82rem; font-weight: bold; color: var(--navy); white-space: nowrap; }
+    .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { background: var(--sky-light); border: 1px solid var(--sky-mid); color: var(--navy); font-size: 0.82rem; font-weight: bold; padding: 7px 16px; border-radius: 20px; cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+    .filter-btn:hover { border-color: var(--blue-accent); }
+    .filter-btn.active { background: var(--blue-accent); border-color: var(--blue-accent); color: var(--white); }
+    .filter-btn[data-region="tc"].active { background: #1a7a5e; border-color: #1a7a5e; }
+    .filter-btn[data-region="sf"].active { background: #1a5e7a; border-color: #1a5e7a; }
+    .filter-btn[data-region="gi"].active { background: #5e3a7a; border-color: #5e3a7a; }
+    .filter-count { font-size: 0.75rem; color: #5580a0; margin-left: auto; white-space: nowrap; }
+
+    /* ===== REGION BADGE on cards ===== */
+    .region-badge { display: inline-block; font-size: 0.68rem; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; margin-bottom: 10px; }
+    .region-badge.network { background: #e8f2fb; color: #2a5a80; }
+    .region-badge.tc { background: #e0f4ee; color: #1a7a5e; }
+    .region-badge.sf { background: #ddeef8; color: #1a5e7a; }
+    .region-badge.gi { background: #ede5f4; color: #5e3a7a; }
+
+    /* ===== DIRECTORY BODY (Zone 3 — white) ===== */
+    .vendors-body { max-width: 960px; margin: 0 auto; padding: 56px 24px 80px; }
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; margin-bottom: 56px; }
+    .category-pill { background: var(--sky-light); border: 1px solid var(--sky-mid); border-radius: 8px; padding: 16px 14px; display: flex; align-items: center; gap: 12px; text-decoration: none; transition: box-shadow 0.2s, border-color 0.2s; }
+    .category-pill:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-color: var(--blue-accent); }
+    .category-pill .cat-icon { font-size: 1.3rem; line-height: 1; }
+    .category-pill .cat-name { font-size: 0.9rem; font-weight: bold; color: var(--navy); }
+    .dir-category { margin-bottom: 48px; }
+    .dir-category.hidden { display: none; }
+    .dir-category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--sky-mid); }
+    .dir-category-icon { font-size: 1.5rem; line-height: 1; }
+    .dir-category-title { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+    .vendor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .vendor-card { border: 1px solid var(--sky-mid); border-radius: 8px; overflow: hidden; background: var(--white); transition: opacity 0.2s; }
+    .vendor-card.hidden { display: none; }
+    .vendor-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .vendor-card-body { padding: 24px; }
+    .vendor-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
+    .vendor-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px; }
+    .vendor-detail { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 5px; }
+    .vendor-detail strong { color: var(--navy); }
+    .vendor-link { font-size: 0.88rem; color: var(--blue-accent); font-weight: bold; text-decoration: none; }
+    .vendor-link:hover { color: var(--navy); }
+
+    /* ===== PLACEHOLDER CARDS ===== */
+    .vendor-card.placeholder { border: 2px dashed #c2d9ee; background: #f5f9fd; }
+    .vendor-card.placeholder h3 { color: #7a9ab5; }
+    .vendor-card.placeholder p { color: #9ab3c8; }
+    .placeholder-cta { font-size: 0.82rem; color: var(--blue-accent); font-weight: bold; text-decoration: none; }
+    .placeholder-cta:hover { color: var(--navy); }
+
+    /* ===== BOTTOM CTA ===== */
+    .two-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+    .cta-block { border-radius: 8px; padding: 40px 32px; text-align: center; }
+    .cta-block.vendor { background: var(--navy); }
+    .cta-block.host { background: var(--blue-accent); }
+    .cta-block h2 { font-size: 1.3rem; color: var(--white); margin-bottom: 10px; }
+    .cta-block p { font-size: 0.92rem; color: var(--sky-mid); line-height: 1.65; margin-bottom: 24px; }
+    .cta-block .btn-cta { display: inline-block; background: var(--white); color: var(--navy); padding: 13px 28px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s; }
+    .cta-block .btn-cta:hover { opacity: 0.88; }
+    @media (max-width: 640px) { .two-cta { grid-template-columns: 1fr; } .cta-block { padding: 32px 24px; } .filter-bar { gap: 10px; } }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-544FD6C6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <a href="index.html" class="nav-logo">Drift <span>Currents</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li class="nav-dropdown">
+      <a href="host-services.html" class="nav-dropdown-toggle">Host <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="host-blog/">Host Blog</a></li>
+        <li><a href="host-services.html">Host Guide</a></li>
+        <li><a href="vendors.html">Vendor Directory</a></li>
+        <li><a href="https://hosts.driftcurrents.com/curated-items-hosts">Curated Items</a></li>
+        <li><a href="mailto:driftcurrents@gmail.com">Contact</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="guest-blog/" class="nav-dropdown-toggle">Guest <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="guest-blog/">Guest Blog</a></li>
+        <li><a href="curated-items-guest.html">Curated Items</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" aria-label="Close menu">&#x2715;</button>
+  <ul>
+    <li><a href="index.html#destinations">Our Destinations</a></li>
+    <li class="nav-dropdown">
+      <a href="host-services.html" class="nav-dropdown-toggle">Host <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="host-blog/">Host Blog</a></li>
+        <li><a href="host-services.html">Host Guide</a></li>
+        <li><a href="vendors.html">Vendor Directory</a></li>
+        <li><a href="https://hosts.driftcurrents.com/curated-items-hosts">Curated Items</a></li>
+        <li><a href="mailto:driftcurrents@gmail.com">Contact</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="guest-blog/" class="nav-dropdown-toggle">Guest <span class="nav-caret">&#9660;</span></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="guest-blog/">Guest Blog</a></li>
+        <li><a href="curated-items-guest.html">Curated Items</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ===== ZONE 1: HERO ===== -->
+<div class="vendors-hero">
+  <div class="hero-badge">Host Access</div>
+  <h1>STR Vendor Network</h1>
+  <p>The full directory. Vetted vendors across every Drift Currents region &mdash; Toccoa Currents, SoFlo Currents, and Golden Isles. Filter by your market and get to work.</p>
+</div>
+
+<!-- Wave: Hero → Region Panel -->
+<div class="zone-wave" style="background: linear-gradient(160deg, var(--navy) 0%, var(--blue-accent) 100%);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C180,50 360,0 540,25 C720,50 900,5 1080,30 C1260,55 1350,15 1440,25 L1440,60 L0,60 Z" fill="#e8f2fb"/>
+  </svg>
+</div>
+
+<!-- ===== ZONE 2: REGION PANEL ===== -->
+<div class="vendors-region-panel">
+  <div class="vendors-region-inner">
+    <p class="vendors-intro">Every vendor in this directory has been vetted for their market. Filter by region to see only what is relevant to you. Vendors marked <strong>Network</strong> serve all Drift Currents markets.</p>
+    <p class="section-label">Active and Upcoming Regions</p>
+    <div class="destination-cards"></div>
+  </div>
+</div>
+
+<!-- Wave: Region Panel → Filter Bar + Directory -->
+<div class="zone-wave" style="background: #e8f2fb;">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C180,10 360,55 540,30 C720,5 900,50 1080,25 C1260,0 1350,40 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<!-- ===== REGION FILTER BAR ===== -->
+<div class="filter-bar">
+  <span class="filter-label">Region:</span>
+  <div class="filter-pills">
+    <button class="filter-btn active" data-region="all">All Regions</button>
+    <button class="filter-btn" data-region="tc">Toccoa Currents</button>
+    <button class="filter-btn" data-region="sf">SoFlo Currents</button>
+    <button class="filter-btn" data-region="gi">Golden Isles</button>
+  </div>
+  <span class="filter-count" id="filterCount"></span>
+</div>
+
+<!-- ===== ZONE 3: DIRECTORY BODY ===== -->
+<div class="vendors-body">
+
+  <div class="category-grid">
+    <a class="category-pill" href="#real-estate"><span class="cat-icon">&#x1F3E1;</span><span class="cat-name">Real Estate</span></a>
+    <a class="category-pill" href="#home-design"><span class="cat-icon">&#x1F3E0;</span><span class="cat-name">Home Design</span></a>
+    <a class="category-pill" href="#photography"><span class="cat-icon">&#x1F4F7;</span><span class="cat-name">Photography</span></a>
+    <a class="category-pill" href="#electrician"><span class="cat-icon">&#x26A1;</span><span class="cat-name">Electrician</span></a>
+    <a class="category-pill" href="#plumber"><span class="cat-icon">&#x1F6B0;</span><span class="cat-name">Plumber</span></a>
+    <a class="category-pill" href="#hvac"><span class="cat-icon">&#x2744;&#xFE0F;</span><span class="cat-name">HVAC</span></a>
+    <a class="category-pill" href="#handyman"><span class="cat-icon">&#x1F527;</span><span class="cat-name">Handyman</span></a>
+    <a class="category-pill" href="#landscaping"><span class="cat-icon">&#x1F33F;</span><span class="cat-name">Landscaping</span></a>
+    <a class="category-pill" href="#pest-control"><span class="cat-icon">&#x1F41C;</span><span class="cat-name">Pest Control</span></a>
+    <a class="category-pill" href="#septic"><span class="cat-icon">&#x1F4A7;</span><span class="cat-name">Septic</span></a>
+    <a class="category-pill" href="#cleaning"><span class="cat-icon">&#x1F9F9;</span><span class="cat-name">Cleaning</span></a>
+  </div>
+
+  <!-- REAL ESTATE -->
+  <div class="dir-category" id="real-estate">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F3E1;</span><span class="dir-category-title">Real Estate</span></div>
+    <div class="vendor-grid">
+
+      <div class="vendor-card" data-region="network">
+        <div class="vendor-card-body">
+          <span class="region-badge network">Network</span>
+          <h3>Foreclosure.com</h3>
+          <p>Search foreclosure listings, bank-owned properties, and distressed real estate across the country. A useful resource for STR investors looking for below-market acquisition opportunities.</p>
+          <div class="vendor-detail"><strong>Service Area:</strong> Nationwide</div>
+          <a href="https://www.foreclosure.com/?rsp=4082" target="_blank" rel="noopener" class="vendor-link">Visit Foreclosure.com &rarr;</a>
+        </div>
+      </div>
+
+      <div class="vendor-card" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Mountain Property Limited</h3>
+          <p>North Georgia mountain real estate specialists serving Blue Ridge and the surrounding area. Contact Rebecca Jones or Tim Helton for buying, selling, or listing your property.</p>
+          <div class="vendor-detail"><strong>Contact:</strong> Rebecca Jones / Tim Helton</div>
+          <div class="vendor-detail"><strong>Service Area:</strong> North Georgia Mountains</div>
+          <a href="https://mountainpropertylimited.com/listings/view/419451" target="_blank" rel="noopener" class="vendor-link">View Featured Listing &rarr;</a>
+        </div>
+      </div>
+
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Real estate specialists for the South Florida STR market. Know someone who should be listed here?</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Real Estate" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Real estate specialists for the Golden Isles STR market. Know someone who should be listed here?</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Real Estate" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOME DESIGN -->
+  <div class="dir-category" id="home-design">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F3E0;</span><span class="dir-category-title">Home Design</span></div>
+    <div class="vendor-grid">
+
+      <div class="vendor-card" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>JHK Designs</h3>
+          <p>Full-service interior design specializing in vacation rental properties. Jim Klippel brings a sharp eye for spaces that photograph well, book well, and hold up to guest use.</p>
+          <div class="vendor-detail"><strong>Service Area:</strong> North Georgia &amp; Southeast</div>
+          <a href="https://www.jhkdesigns.com/" target="_blank" rel="noopener" class="vendor-link">Visit JHK Designs &rarr;</a>
+        </div>
+      </div>
+
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Interior design and staging specialists for the South Florida vacation rental market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Home Design" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Interior design and staging specialists for the Golden Isles vacation rental market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Home Design" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PHOTOGRAPHY -->
+  <div class="dir-category" id="photography">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F4F7;</span><span class="dir-category-title">Photography</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR listing photography for the North Georgia mountains market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Photography" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR listing photography for the South Florida market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Photography" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR listing photography for the Golden Isles market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Photography" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELECTRICIAN -->
+  <div class="dir-category" id="electrician">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x26A1;</span><span class="dir-category-title">Electrician</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed electrician serving the North Georgia mountains STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Electrician" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed electrician serving the South Florida STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Electrician" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed electrician serving the Golden Isles STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Electrician" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLUMBER -->
+  <div class="dir-category" id="plumber">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F6B0;</span><span class="dir-category-title">Plumber</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed plumber serving the North Georgia mountains STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Plumber" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed plumber serving the South Florida STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Plumber" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Licensed plumber serving the Golden Isles STR market.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Plumber" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HVAC -->
+  <div class="dir-category" id="hvac">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x2744;&#xFE0F;</span><span class="dir-category-title">HVAC</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>HVAC service and installation for North Georgia mountains STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC HVAC" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>HVAC service and installation for South Florida STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo HVAC" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>HVAC service and installation for Golden Isles STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles HVAC" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HANDYMAN -->
+  <div class="dir-category" id="handyman">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F527;</span><span class="dir-category-title">Handyman</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Reliable handyman service for North Georgia mountains STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Handyman" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Reliable handyman service for South Florida STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Handyman" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Reliable handyman service for Golden Isles STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Handyman" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LANDSCAPING -->
+  <div class="dir-category" id="landscaping">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F33F;</span><span class="dir-category-title">Landscaping</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Landscaping and grounds maintenance for North Georgia mountains STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Landscaping" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Landscaping and grounds maintenance for South Florida STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Landscaping" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Landscaping and grounds maintenance for Golden Isles STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Landscaping" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PEST CONTROL -->
+  <div class="dir-category" id="pest-control">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F41C;</span><span class="dir-category-title">Pest Control</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Pest control service for North Georgia mountains STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Pest Control" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Pest control service for South Florida STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Pest Control" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Pest control service for Golden Isles STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Pest Control" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEPTIC -->
+  <div class="dir-category" id="septic">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F4A7;</span><span class="dir-category-title">Septic</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Septic service and inspection for North Georgia mountains STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Septic" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Septic service and inspection for South Florida STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Septic" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>Septic service and inspection for Golden Isles STR properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Septic" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLEANING -->
+  <div class="dir-category" id="cleaning">
+    <div class="dir-category-header"><span class="dir-category-icon">&#x1F9F9;</span><span class="dir-category-title">Cleaning</span></div>
+    <div class="vendor-grid">
+      <div class="vendor-card placeholder" data-region="tc">
+        <div class="vendor-card-body">
+          <span class="region-badge tc">Toccoa Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR turnover cleaning service for North Georgia mountains properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — TC Cleaning" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="sf">
+        <div class="vendor-card-body">
+          <span class="region-badge sf">SoFlo Currents</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR turnover cleaning service for South Florida properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — SoFlo Cleaning" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+      <div class="vendor-card placeholder" data-region="gi">
+        <div class="vendor-card-body">
+          <span class="region-badge gi">Golden Isles</span>
+          <h3>Vendor Spot Available</h3>
+          <p>STR turnover cleaning service for Golden Isles properties.</p>
+          <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Golden Isles Cleaning" class="placeholder-cta">Refer a Vendor &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-cta">
+    <div class="cta-block vendor">
+      <h2>Are You a Local Vendor?</h2>
+      <p>Get your business in front of STR hosts across the Drift Currents network. Regional or network-wide placement. Flat annual fee. No commissions.</p>
+      <a href="mailto:driftcurrents@gmail.com?subject=Vendor Listing Inquiry — Drift Currents Network" class="btn-cta">Get Listed</a>
+    </div>
+    <div class="cta-block host">
+      <h2>Have a Vendor to Recommend?</h2>
+      <p>Know someone reliable in your market? Send us the referral. If they pass vetting and list, you get credit toward your next renewal.</p>
+      <a href="mailto:driftcurrents@gmail.com?subject=Vendor Referral — Drift Currents" class="btn-cta">Send a Referral</a>
+    </div>
+  </div>
+
+</div>
+
+<footer style="background: var(--navy); color: var(--sky-light); text-align: center; padding: 40px 24px; font-size: 0.88rem; line-height: 1.8;">
+  <p style="margin-bottom: 0.4rem;"><strong style="color: var(--white);">Drift Currents</strong> &nbsp;&middot;&nbsp; Curated Short-Term Rentals Across the Southeast</p>
+  <p>
+    <a href="index.html" style="color: var(--sky-mid); text-decoration: none;">Home</a> &nbsp;&middot;&nbsp;
+    <a href="host-services.html" style="color: var(--sky-mid); text-decoration: none;">Host Guide</a> &nbsp;&middot;&nbsp;
+    <a href="curated-items-hosts.html" style="color: var(--sky-mid); text-decoration: none;">Curated Items</a> &nbsp;&middot;&nbsp;
+    <a href="vendors.html" style="color: var(--sky-mid); text-decoration: none;">Vendors</a>
+  </p>
+  <p style="margin-top: 0.8rem; font-size: 0.75rem; opacity: 0.5;">&copy; Drift Currents &middot; All rights reserved</p>
+  <p style="margin-top: 0.4rem; font-size: 0.75rem; opacity: 0.8;">
+    <a href="privacy-policy.html" style="color: inherit;">Privacy Policy</a>
+  </p>
+</footer>
+
+<script src="src/js/destinations.js"></script>
+<script>
+  // ===== NAV DRAWER =====
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const closeBtn = document.querySelector('.nav-drawer-close');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+  hamburger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  // ===== REGION FILTER =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const vendorCards = document.querySelectorAll('.vendor-card');
+  const categories = document.querySelectorAll('.dir-category');
+  const filterCount = document.getElementById('filterCount');
+
+  // activeRegions: null = show all, otherwise a Set of selected region keys
+  let activeRegions = null;
+
+  function applyFilter() {
+    let visibleCount = 0;
+
+    vendorCards.forEach(card => {
+      const region = card.dataset.region; // 'network', 'tc', 'sf', 'gi'
+      const show = activeRegions === null
+        || region === 'network'
+        || activeRegions.has(region);
+      card.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    // Hide category sections that have no visible cards
+    categories.forEach(cat => {
+      const hasVisible = [...cat.querySelectorAll('.vendor-card')].some(c => !c.classList.contains('hidden'));
+      cat.classList.toggle('hidden', !hasVisible);
+    });
+
+    filterCount.textContent = activeRegions === null
+      ? ''
+      : visibleCount + ' vendor' + (visibleCount !== 1 ? 's' : '') + ' shown';
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const region = btn.dataset.region;
+
+      if (region === 'all') {
+        // Reset — show everything
+        activeRegions = null;
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      } else {
+        // Toggle this region
+        if (activeRegions === null) activeRegions = new Set();
+        document.querySelector('.filter-btn[data-region="all"]').classList.remove('active');
+
+        if (activeRegions.has(region)) {
+          activeRegions.delete(region);
+          btn.classList.remove('active');
+        } else {
+          activeRegions.add(region);
+          btn.classList.add('active');
+        }
+
+        // If nothing selected, fall back to All
+        if (activeRegions.size === 0) {
+          activeRegions = null;
+          document.querySelector('.filter-btn[data-region="all"]').classList.add('active');
+        }
+      }
+
+      applyFilter();
+    });
+  });
+
+  // Init
+  applyFilter();
+</script>
+
+</body>
+</html>
