@@ -18,12 +18,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .blog-hero { background: linear-gradient(160deg, #B8D9F0 0%, #EBF5FB 100%); padding: 60px 24px 40px; text-align: center; }
     .blog-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 12px; }
     .blog-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
-    .blog-grid-section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
+    .blog-phase-section { max-width: 1100px; margin: 0 auto; padding: 48px 24px 16px; }
+    .blog-phase-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 12px; border-bottom: 2px solid var(--sky-mid); }
+    .blog-phase-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue-accent); font-weight: bold; }
+    .blog-phase-header h2 { font-size: 1.5rem; color: var(--navy); margin: 0; }
+    .blog-phase-desc { font-size: 0.88rem; color: var(--text-muted); margin: -16px 0 28px; line-height: 1.55; }
+    .blog-phase-coming { background: var(--sky-light); border: 1px dashed var(--sky-mid); border-radius: 8px; padding: 28px 24px; text-align: center; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 48px; }
+    .blog-phase-coming strong { color: var(--navy); display: block; font-size: 1rem; margin-bottom: 6px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; margin-bottom: 48px; }
     .blog-card { background: var(--white); border: 1px solid var(--sky-mid); border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--navy); display: block; transition: transform 0.2s, box-shadow 0.2s; }
     .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,59,94,0.12); }
     .blog-card-top { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-    .blog-card-top.host { background: linear-gradient(135deg, #1A6FA8, #0D3B5E); }
+    .blog-card-top.setup { background: linear-gradient(135deg, #1A6FA8, #0D3B5E); }
+    .blog-card-top.stay { background: linear-gradient(135deg, #2E86AB, #1A5276); }
+    .blog-card-top.stream { background: linear-gradient(135deg, #148F77, #0E6655); }
     .blog-card-body { padding: 24px; }
     .blog-card-category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-accent); margin-bottom: 8px; display: block; }
     .blog-card-title { font-size: 1.15rem; font-weight: bold; margin-bottom: 10px; line-height: 1.3; color: var(--navy); }
@@ -95,16 +103,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div style="background: var(--navy); padding: 20px 24px; text-align: center;">
-  <p style="font-size: 0.82rem; color: #B8D9F0; margin: 0;">Every post on this blog is a chapter in the making. <strong style="color: #ffffff;">STR Host Guide: Setup. Stay. Stream.</strong> &mdash; coming soon on Amazon.</p>
+  <p style="font-size: 0.82rem; color: #B8D9F0; margin: 0;">Every post on this blog is a chapter in the making. <strong style="color: #ffffff;">STR Host Guide: Scout. Setup. Stay. Stream.</strong> &mdash; coming soon on Amazon.</p>
 </div>
 
-<div class="blog-grid-section">
+<!-- START HERE -->
+<div class="blog-phase-section" id="start-here">
+  <div class="blog-phase-header">
+    <span class="blog-phase-label">Start Here</span>
+    <h2>Read This First</h2>
+  </div>
+  <p class="blog-phase-desc">Understand the system before you start buying anything. Every setup decision you make only makes sense once you know what you are trying to prevent.</p>
+  <div class="blog-grid">
+
+    <a href="airbnb-guest-count-trap.html" class="blog-card">
+      <div class="blog-card-top" style="background: linear-gradient(135deg, #2C3E50, #1a252f);">&#x26A0;&#xFE0F;</div>
+      <div class="blog-card-body">
+        <span class="blog-card-category">Know Your Platform</span>
+        <div class="blog-card-title">The Airbnb Guest Count Trap Every Host Needs to Know</div>
+        <div class="blog-card-excerpt">Airbnb shows hosts a guest count that excludes infants. You accepted 3. Four people show up. Here is what the platform does not tell you &mdash; and how to protect yourself.</div>
+        <div class="blog-card-meta">August 2026 &middot; 5 min read</div>
+        <div class="blog-card-link">Read More &rarr;</div>
+      </div>
+    </a>
+
+    <a href="how-to-screen-str-guests.html" class="blog-card">
+      <div class="blog-card-top" style="background: linear-gradient(135deg, #2C3E50, #1a252f);">&#x1F3AF;</div>
+      <div class="blog-card-body">
+        <span class="blog-card-category">Start Here</span>
+        <div class="blog-card-title">How to Dissuade Bad Guests from Booking</div>
+        <div class="blog-card-excerpt">The system we use to keep bad actors out of our cabins &mdash; smart locks, camera strategy, listing settings, house rules, and guest screening tools that actually work.</div>
+        <div class="blog-card-meta">August 2026 &middot; 10 min read</div>
+        <div class="blog-card-link">Read More &rarr;</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- SETUP -->
+<div class="blog-phase-section" id="setup">
+  <div class="blog-phase-header">
+    <span class="blog-phase-label">Phase 1</span>
+    <h2>Setup</h2>
+  </div>
+  <p class="blog-phase-desc">Everything that happens before your first guest arrives &mdash; compliance, supplies, safety systems, and infrastructure.</p>
   <div class="blog-grid">
 
     <a href="str-ordinances-know-before-you-buy.html" class="blog-card">
-      <div class="blog-card-top host">&#x1F6A8;</div>
+      <div class="blog-card-top setup">&#x1F6A8;</div>
       <div class="blog-card-body">
-        <span class="blog-card-category">Host Strategy</span>
+        <span class="blog-card-category">Ch: STR Ordinances</span>
         <div class="blog-card-title">Know Your STR Ordinances Before You Buy Anything</div>
         <div class="blog-card-excerpt">STR ordinances dictate what smoke detectors, locks, and safety equipment you can install. We bought three different smoke detectors for one property. Here is why.</div>
         <div class="blog-card-meta">August 2026 &middot; 6 min read</div>
@@ -113,9 +161,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 
     <a href="best-str-supplies-mountain-cabins.html" class="blog-card">
-      <div class="blog-card-top host">&#x1F3D4;</div>
+      <div class="blog-card-top setup">&#x1F3D4;</div>
       <div class="blog-card-body">
-        <span class="blog-card-category">STR Host Tips</span>
+        <span class="blog-card-category">Ch: Buy Equipment</span>
         <div class="blog-card-title">Best STR Host Supplies for Mountain Cabins &mdash; What We Actually Stock</div>
         <div class="blog-card-excerpt">The exact products we stock our North Georgia cabins with, tested across hundreds of guest stays. Bedding, kitchen, safety, smart home, and more.</div>
         <div class="blog-card-meta">August 2026 &middot; 8 min read</div>
@@ -123,17 +171,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
 
-    <a href="how-to-screen-str-guests.html" class="blog-card">
-      <div class="blog-card-top host">&#x1F6E1;</div>
+    <a href="security-camera-setup-str.html" class="blog-card">
+      <div class="blog-card-top setup">&#x1F4F9;</div>
       <div class="blog-card-body">
-        <span class="blog-card-category">STR Host Tips</span>
-        <div class="blog-card-title">How to Screen STR Guests and Protect Your Property</div>
-        <div class="blog-card-excerpt">The system we use to keep bad actors out of our cabins &mdash; smart locks, camera strategy, listing settings, house rules, and guest screening tools that actually work.</div>
-        <div class="blog-card-meta">August 2026 &middot; 10 min read</div>
+        <span class="blog-card-category">Ch: Property Setup</span>
+        <div class="blog-card-title">Security Camera Setup for STR Properties &mdash; No Blind Spots, No Single Points of Failure</div>
+        <div class="blog-card-excerpt">Guests tried to disable every camera on our property. They couldn&rsquo;t. Here is the placement strategy, solar vs plug-in logic, network segmentation, and the full story.</div>
+        <div class="blog-card-meta">August 2026 &middot; 7 min read</div>
         <div class="blog-card-link">Read More &rarr;</div>
       </div>
     </a>
 
+  </div>
+</div>
+
+<!-- STAY -->
+<div class="blog-phase-section" id="stay">
+  <div class="blog-phase-header">
+    <span class="blog-phase-label">Phase 2</span>
+    <h2>Stay</h2>
+  </div>
+  <p class="blog-phase-desc">Managing guests, protecting your property, and delivering stays that earn five-star reviews.</p>
+  <div class="blog-phase-coming">
+    <strong>Posts coming soon</strong>
+    Guest messaging templates, turnover checklists, handling problem guests, and more &mdash; all part of <em>STR Host Guide: Scout. Setup. Stay. Stream.</em>
+  </div>
+</div>
+
+<!-- STREAM -->
+<div class="blog-phase-section" id="stream">
+  <div class="blog-phase-header">
+    <span class="blog-phase-label">Phase 3</span>
+    <h2>Stream</h2>
+  </div>
+  <p class="blog-phase-desc">Building revenue beyond the booking &mdash; affiliate pages, listing optimization, pricing strategy, and passive income from your platform presence.</p>
+  <div class="blog-phase-coming">
+    <strong>Posts coming soon</strong>
+    Listing optimization, pricing strategy, affiliate setup, and more &mdash; all part of <em>STR Host Guide: Scout. Setup. Stay. Stream.</em>
   </div>
 </div>
 
