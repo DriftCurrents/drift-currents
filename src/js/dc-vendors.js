@@ -27,7 +27,8 @@ var DC_VENDOR_PRO_REGIONS = ['tc', 'sf', 'gi'];
 
 function renderDCVendors(vendorArrays, containerSelector, options) {
   var pro = (options && options.pro) || false;
-  var allVendors = [].concat.apply([], vendorArrays);
+  var allVendors = [].concat.apply([], vendorArrays.filter(function(a) { return Array.isArray(a); }));
+  if (!pro) allVendors = allVendors.filter(function(v) { return !v.paid; });
 
   var byCategory = {};
   allVendors.forEach(function(v) {
