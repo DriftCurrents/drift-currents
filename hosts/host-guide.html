@@ -19,17 +19,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .services-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 10px; }
     .services-hero .hero-pillars { font-size: clamp(1.2rem, 3vw, 1.7rem); font-weight: bold; color: var(--blue-accent); letter-spacing: 0.04em; margin-bottom: 16px; }
     .services-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; line-height: 1.65; }
-    .pillars-intro { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-bottom: 48px; border-radius: 8px; overflow: hidden; border: 1px solid var(--sky-mid); }
-    .pillar { padding: 28px 24px; text-align: center; }
+    .pillars-intro { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-bottom: 48px; border-radius: 8px; overflow: hidden; border: 1px solid var(--sky-mid); }
+    .pillar { padding: 24px 18px; text-align: center; }
+    .pillar.scout { background: #FFFDE7; }
     .pillar.setup { background: #EBF5FB; }
     .pillar.stay { background: #B8D9F0; }
+    .pillar.strategy { background: #1A2540; }
     .pillar.stream { background: var(--navy); }
     .pillar-word { font-size: 1.3rem; font-weight: bold; display: block; margin-bottom: 8px; }
-    .pillar.setup .pillar-word, .pillar.stay .pillar-word { color: var(--navy); }
-    .pillar.stream .pillar-word { color: #4ecdc4; }
+    .pillar.scout .pillar-word, .pillar.setup .pillar-word, .pillar.stay .pillar-word { color: var(--navy); }
+    .pillar.strategy .pillar-word, .pillar.stream .pillar-word { color: #4ecdc4; }
     .pillar p { font-size: 0.83rem; line-height: 1.55; margin: 0; }
-    .pillar.setup p, .pillar.stay p { color: #4A5568; }
-    .pillar.stream p { color: #B8D9F0; }
+    .pillar.scout p, .pillar.setup p, .pillar.stay p { color: #4A5568; }
+    .pillar.strategy p, .pillar.stream p { color: #B8D9F0; }
     @media (max-width: 640px) { .pillars-intro { grid-template-columns: 1fr; } }
     .phase-header { margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--sky-mid); }
     .phase-header .phase-word { font-size: 1.25rem; font-weight: bold; color: var(--navy); }
@@ -168,6 +170,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="section-sub">We work directly with hosts who are starting their first short-term rental or want to improve a listing that is underperforming. Every engagement is hands-on &mdash; not a template, not a course.</p>
 
   <div class="pillars-intro">
+    <div class="pillar scout">
+      <span class="pillar-word">Scout.</span>
+      <p>Know your goal. Know the ordinances. Know the OTA rules. Know when to revisit a decision you thought was settled.</p>
+    </div>
     <div class="pillar setup">
       <span class="pillar-word">Setup.</span>
       <p>Get your property compliant, configured, and live &mdash; equipment, installs, accounts, listing, calendar, and guest messaging.</p>
@@ -175,6 +181,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pillar stay">
       <span class="pillar-word">Stay.</span>
       <p>Get found by the right guests. Regional site listing, Facebook presence, and paid ads that put your property in front of travelers already looking.</p>
+    </div>
+    <div class="pillar strategy">
+      <span class="pillar-word">Strategy.</span>
+      <p>House rules, security hardware, guest screening, and documentation — assembled into a defensive layer that runs underneath everything else.</p>
     </div>
     <div class="pillar stream">
       <span class="pillar-word">Stream.</span>
@@ -325,7 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="phase-header">
-    <span class="phase-word">Setup.</span><span class="phase-desc">Get compliant, configured, and live.</span>
+    <span class="phase-word">Scout.</span><span class="phase-desc">Know before you act. Know when to revisit.</span>
   </div>
   <div class="service-grid">
     <div class="service-card" style="border-style: dashed; background: #f9fbfd;">
@@ -333,6 +343,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4>Find a Property</h4>
       <p>Searching for a foreclosure, fixer-upper, or investment property? Start your search at <a href="https://www.foreclosure.com/?rsp=4082" target="_blank" rel="noopener" style="color: var(--blue-accent); font-weight: bold;">Foreclosure.com &rarr;</a></p>
     </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4CB;</span>
+      <h4>Market &amp; Ordinance Review</h4>
+      <p>Before you buy, know the rules. We review STR ordinances, permit requirements, and platform policies for your target market so you are not learning the hard way after closing.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F3AF;</span>
+      <h4>Goal Alignment</h4>
+      <p>Not every host is chasing the same outcome. We help you get clear on your goal &mdash; covering carrying costs, offsetting W2 income, building a portfolio &mdash; and set up your operation to match it.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4F1;</span>
+      <h4>OTA Platform Briefing</h4>
+      <p>Airbnb and VRBO have rules most new hosts never read until they get burned. We walk you through the platform policies, infant guest count quirks, photo rules, and IB settings before your listing goes live.</p>
+    </div>
+  </div>
+
+  <div class="phase-header">
+    <span class="phase-word">Setup.</span><span class="phase-desc">Get compliant, configured, and live.</span>
+  </div>
+  <div class="service-grid">
     <div class="service-card" style="border-style: dashed; background: #f9fbfd;">
       <span class="service-icon">&#x1F3E0;</span>
       <h4>Design Your Property</h4>
@@ -393,6 +424,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="service-icon">&#x1F4F2;</span>
       <h4>Facebook Ads</h4>
       <p>Targeted Facebook ad campaigns for your STR &mdash; we set up your Meta pixel, build your audience, and run ads that put your property in front of the right travelers. Your pixel data also powers retargeting across Drift Currents regional sites.</p>
+    </div>
+  </div>
+
+  <div class="phase-header">
+    <span class="phase-word">Strategy.</span><span class="phase-desc">A defensive layer that runs underneath everything else.</span>
+  </div>
+  <div class="service-grid">
+    <div class="service-card">
+      <span class="service-icon">&#x1F6E1;&#xFE0F;</span>
+      <h4>House Rules Setup</h4>
+      <p>House rules that match how OTA enforcement actually works &mdash; specific, documented, and written to support a penalty-free cancellation if a guest violates them.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F50D;</span>
+      <h4>Guest Screening Protocol</h4>
+      <p>Know what the platform shows you, what the host community knows, and how to read AirReview ratings. We set up a consistent screening process you run the same way every booking.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4F9;</span>
+      <h4>Security Camera Layout</h4>
+      <p>No blind spots, no single points of failure. We design your exterior camera placement, solar vs. plug-in logic, and network segmentation so guests cannot disable your coverage.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4F8;</span>
+      <h4>Documentation System</h4>
+      <p>Timestamped photos before every check-in, landscape format, organized by date. We set up the system so your documentation library builds itself and doubles as a listing photo source.</p>
     </div>
   </div>
 
