@@ -1,6 +1,6 @@
 // DC vendor directory render + filter.
-// Usage: renderDCVendors([TC_VENDORS], '#dc-vendor-dir', { pro: false })
-// pro: true — adds placeholder cards for regions with no vendor in each category
+// Usage: renderDCVendors([TC_VENDORS], '#dc-vendor-dir', { paid: false })
+// paid: true — shows paid vendors and adds placeholder cards for uncovered regions
 
 var DC_VENDOR_CATEGORIES = [
   { id: 'real-estate',  icon: '&#x1F3E1;', title: 'Real Estate' },
@@ -23,12 +23,12 @@ var DC_VENDOR_REGION_LABELS = {
   gi: 'Golden Isles'
 };
 
-var DC_VENDOR_PRO_REGIONS = ['tc', 'sf', 'gi'];
+var DC_VENDOR_PAID_REGIONS = ['tc', 'sf', 'gi'];
 
 function renderDCVendors(vendorArrays, containerSelector, options) {
-  var pro = (options && options.pro) || false;
+  var paid = (options && options.paid) || false;
   var allVendors = [].concat.apply([], vendorArrays.filter(function(a) { return Array.isArray(a); }));
-  if (!pro) allVendors = allVendors.filter(function(v) { return !v.paid; });
+  if (!paid) allVendors = allVendors.filter(function(v) { return !v.paid; });
 
   var byCategory = {};
   allVendors.forEach(function(v) {
@@ -42,7 +42,7 @@ function renderDCVendors(vendorArrays, containerSelector, options) {
   DC_VENDOR_CATEGORIES.forEach(function(cat) {
     var vendors = byCategory[cat.id] || [];
     var coveredRegions = vendors.map(function(v) { return v.region; });
-    var hasPlaceholders = pro && DC_VENDOR_PRO_REGIONS.some(function(r) { return !coveredRegions.includes(r); });
+    var hasPlaceholders = paid && DC_VENDOR_PAID_REGIONS.some(function(r) { return !coveredRegions.includes(r); });
 
     var section = document.createElement('div');
     section.className = 'dir-category';
@@ -67,8 +67,8 @@ function renderDCVendors(vendorArrays, containerSelector, options) {
         html += '</div></div>';
       });
 
-      if (pro) {
-        DC_VENDOR_PRO_REGIONS.forEach(function(r) {
+      if (paid) {
+        DC_VENDOR_PAID_REGIONS.forEach(function(r) {
           if (!coveredRegions.includes(r)) {
             var rl = DC_VENDOR_REGION_LABELS[r];
             html += '<div class="vendor-card placeholder" data-region="' + r + '">';
