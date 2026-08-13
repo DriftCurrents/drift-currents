@@ -63,6 +63,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-block .btn-cta { display: inline-block; background: var(--white); color: var(--navy); padding: 13px 28px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s; }
     .cta-block .btn-cta:hover { opacity: 0.88; }
     @media (max-width: 640px) { .two-cta { grid-template-columns: 1fr; } .cta-block { padding: 32px 24px; } .region-grid { grid-template-columns: 1fr; } }
+
+    /* ===== REGION FILTER BAR ===== */
+    .filter-bar { background: var(--white); border-bottom: 1px solid var(--sky-mid); padding: 16px 24px; position: sticky; top: 0; z-index: 90; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .filter-label { font-size: 0.82rem; font-weight: bold; color: var(--navy); white-space: nowrap; }
+    .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { background: var(--sky-light); border: 1px solid var(--sky-mid); color: var(--navy); font-size: 0.82rem; font-weight: bold; padding: 7px 16px; border-radius: 20px; cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+    .filter-btn:hover { border-color: var(--blue-accent); }
+    .filter-btn.active { background: var(--blue-accent); border-color: var(--blue-accent); color: var(--white); }
+    .filter-btn[data-region="tc"].active { background: #1a7a5e; border-color: #1a7a5e; }
+    .filter-btn[data-region="sf"].active { background: #1a5e7a; border-color: #1a5e7a; }
+    .filter-btn[data-region="gi"].active { background: #5e3a7a; border-color: #5e3a7a; }
+    .filter-count { font-size: 0.75rem; color: #5580a0; margin-left: auto; white-space: nowrap; }
+
+    /* ===== REGION BADGE ===== */
+    .region-badge { display: inline-block; font-size: 0.68rem; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; margin-bottom: 10px; }
+    .region-badge.network { background: #e8f2fb; color: #2a5a80; }
+    .region-badge.tc { background: #e0f4ee; color: #1a7a5e; }
+    .region-badge.sf { background: #ddeef8; color: #1a5e7a; }
+    .region-badge.gi { background: #ede5f4; color: #5e3a7a; }
+
+    /* ===== FILTER HIDE ===== */
+    .vendor-card.hidden { display: none; }
+    .dir-category.hidden { display: none; }
   </style>
 </head>
 <body>
@@ -159,6 +182,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </svg>
 </div>
 
+<!-- ===== REGION FILTER BAR ===== -->
+<div class="filter-bar">
+  <span class="filter-label">Region:</span>
+  <div class="filter-pills">
+    <button class="filter-btn active" data-region="all">All Regions</button>
+    <button class="filter-btn" data-region="tc">Toccoa Currents</button>
+    <button class="filter-btn" data-region="sf">SoFlo Currents</button>
+    <button class="filter-btn" data-region="gi">Golden Isles</button>
+  </div>
+  <span class="filter-count" id="filterCount"></span>
+</div>
+
 <!-- ===== ZONE 3: DIRECTORY BODY ===== -->
 <div class="vendors-body">
 
@@ -176,64 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="category-pill" href="#cleaning"><span class="cat-icon">&#x1F9F9;</span><span class="cat-name">Cleaning</span></a>
   </div>
 
-  <div class="dir-category" id="real-estate">
-    <div class="dir-category-header"><span class="dir-category-icon">&#x1F3E1;</span><span class="dir-category-title">Real Estate</span></div>
-    <div class="vendor-grid">
-      <div class="vendor-card">
-        <div class="vendor-card-body">
-          <h3>Foreclosure.com</h3>
-          <p>Search foreclosure listings, bank-owned properties, and distressed real estate across the country. A useful resource for STR investors looking for below-market acquisition opportunities.</p>
-          <div class="vendor-detail"><strong>Service Area:</strong> Nationwide</div>
-          <a href="https://www.foreclosure.com/?rsp=4082" target="_blank" rel="noopener" class="vendor-link">Visit Foreclosure.com &rarr;</a>
-        </div>
-      </div>
-      <div class="vendor-card">
-        <div class="vendor-card-body">
-          <h3>Mountain Property Limited</h3>
-          <p>North Georgia mountain real estate specialists serving Blue Ridge and the surrounding area. Contact Rebecca Jones or Tim Helton for buying, selling, or listing your property.</p>
-          <div class="vendor-detail"><strong>Contact:</strong> Rebecca Jones / Tim Helton</div>
-          <div class="vendor-detail"><strong>Service Area:</strong> North Georgia Mountains</div>
-          <a href="https://mountainpropertylimited.com/listings/view/419451" target="_blank" rel="noopener" class="vendor-link">View Featured Listing &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="dir-category" id="home-design">
-    <div class="dir-category-header"><span class="dir-category-icon">&#x1F3E0;</span><span class="dir-category-title">Home Design</span></div>
-    <div class="vendor-grid">
-      <div class="vendor-card">
-        <div class="vendor-card-body">
-          <h3>JHK Designs</h3>
-          <p>Full-service interior design specializing in vacation rental properties. Jim Klippel brings a sharp eye for spaces that photograph well, book well, and hold up to guest use.</p>
-          <div class="vendor-detail"><strong>Service Area:</strong> North Georgia &amp; Southeast</div>
-          <a href="https://www.jhkdesigns.com/" target="_blank" rel="noopener" class="vendor-link">Visit JHK Designs &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="dir-category" id="photography"><div class="dir-category-header"><span class="dir-category-icon">&#x1F4F7;</span><span class="dir-category-title">Photography</span></div></div>
-  <div class="dir-category" id="electrician"><div class="dir-category-header"><span class="dir-category-icon">&#x26A1;</span><span class="dir-category-title">Electrician</span></div></div>
-  <div class="dir-category" id="plumber"><div class="dir-category-header"><span class="dir-category-icon">&#x1F6B0;</span><span class="dir-category-title">Plumber</span></div></div>
-  <div class="dir-category" id="hvac"><div class="dir-category-header"><span class="dir-category-icon">&#x2744;&#xFE0F;</span><span class="dir-category-title">HVAC</span></div></div>
-  <div class="dir-category" id="handyman"><div class="dir-category-header"><span class="dir-category-icon">&#x1F527;</span><span class="dir-category-title">Handyman</span></div></div>
-  <div class="dir-category" id="landscaping">
-    <div class="dir-category-header"><span class="dir-category-icon">&#x1F33F;</span><span class="dir-category-title">Landscaping</span></div>
-    <div class="vendor-grid">
-      <div class="vendor-card">
-        <div class="vendor-card-body">
-          <h3>Nichol's Tree &amp; Landscape</h3>
-          <p>Local tree and landscape service in the North Georgia mountains.</p>
-          <div class="vendor-detail"><strong>Service Area:</strong> Fannin &amp; Union County, GA</div>
-          <a href="https://maps.app.goo.gl/Nu2c4PSZ9i7wEKPm8" target="_blank" rel="noopener" class="vendor-link">View on Google Maps &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="dir-category" id="pest-control"><div class="dir-category-header"><span class="dir-category-icon">&#x1F41C;</span><span class="dir-category-title">Pest Control</span></div></div>
-  <div class="dir-category" id="septic"><div class="dir-category-header"><span class="dir-category-icon">&#x1F4A7;</span><span class="dir-category-title">Septic</span></div></div>
-  <div class="dir-category" id="cleaning"><div class="dir-category-header"><span class="dir-category-icon">&#x1F9F9;</span><span class="dir-category-title">Cleaning</span></div></div>
+  <div id="dc-vendor-dir"></div>
 
   <div class="two-cta">
     <div class="cta-block vendor">
@@ -265,6 +243,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="src/js/destinations.js"></script>
+<script src="https://toccoacurrents.com/src/js/tc-vendors.js"></script>
+<script src="src/js/dc-vendors.js"></script>
+<script>renderDCVendors([TC_VENDORS], '#dc-vendor-dir');</script>
 <script>
   const hamburger = document.querySelector('.nav-hamburger');
   const drawer = document.getElementById('navDrawer');
