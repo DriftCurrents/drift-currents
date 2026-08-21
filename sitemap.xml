@@ -18,6 +18,9 @@
   <url><loc>https://driftcurrents.com/guest-blog/what-shampoo-do-you-use</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://driftcurrents.com/guest-blog/dog-friendly-cabin-toccoa-river</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Host Guide -->
+  <url><loc>https://hosts.driftcurrents.com/host-guide</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
   <!-- Curated Items -->
   <url><loc>https://driftcurrents.com/curated-items-guest</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://hosts.driftcurrents.com/curated-items-hosts</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
