@@ -1,48 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- updated 2026-08-21 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://driftcurrents.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/curated-items.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/host-blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/host-blog/best-str-supplies-mountain-cabins.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/host-blog/how-to-screen-str-guests.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/guest-blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/guest-blog/what-shampoo-do-you-use.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/guest-blog/dog-friendly-cabin-toccoa-river.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://driftcurrents.com/host-services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Home -->
+  <url><loc>https://driftcurrents.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- Host Services -->
+  <url><loc>https://driftcurrents.com/host-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Host Blog -->
+  <url><loc>https://driftcurrents.com/host-blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://driftcurrents.com/host-blog/best-str-supplies-mountain-cabins</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://driftcurrents.com/host-blog/how-to-screen-str-guests</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Guest Blog -->
+  <url><loc>https://driftcurrents.com/guest-blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://driftcurrents.com/guest-blog/what-shampoo-do-you-use</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://driftcurrents.com/guest-blog/dog-friendly-cabin-toccoa-river</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Curated Items -->
+  <url><loc>https://driftcurrents.com/curated-items-guest</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hosts.driftcurrents.com/curated-items-hosts</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
 </urlset>
